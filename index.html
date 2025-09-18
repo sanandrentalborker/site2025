@@ -16,7 +16,7 @@
       text-align: center;
     }
     .logo {
-      width: 220px; /* Increased size */
+      width: 220px;
       max-width: 90%;
       margin-bottom: 20px;
     }
@@ -90,11 +90,13 @@
 
   <div class="instruction">
     Please enter your name, mobile number, and area below and click on the "Register" button.  
-    We will contact you shortly and assist you in finding the right home.
+    Our team will contact you shortly to help you find the perfect home.
   </div>
 
   <div class="form-container">
     <form action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://sanandrentalborker.github.io/SANANDRENTALBROKER/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
       <input type="text" name="Name" placeholder="Your Name" required>
       <input type="tel" name="Mobile" placeholder="Mobile Number" required>
       <input type="text" name="WhatsApp" placeholder="WhatsApp Number" required>
