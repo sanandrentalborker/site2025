@@ -22,7 +22,7 @@
             --primary-color: #17a2b8; /* Blue */
             --secondary-color: #dc3545; /* Red */
             --accent-color: #ffc107; /* Yellow */
-            --background-light: #f4f7ff;
+            --background-light: #f7f9fc; /* Very light subtle background */
         }
 
         body { 
@@ -51,7 +51,7 @@
         }
 
         /* =================================================== */
-        /* 2. HEADER & NAVIGATION (Responsive) */
+        /* 2. HEADER & NAVIGATION */
         /* =================================================== */
         .header { 
             background-color: var(--primary-color); 
@@ -76,7 +76,6 @@
             background: var(--primary-color); 
             display: none; 
             flex-direction: column; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .nav.open { display: flex; } 
         .nav a { 
@@ -88,7 +87,7 @@
         }
 
         /* =================================================== */
-        /* 3. HERO SECTION (New H1 Style) & CTA */
+        /* 3. HERO SECTION (H1 & CENTERED CTA) */
         /* =================================================== */
         #hero { 
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
@@ -99,25 +98,41 @@
             font-family: 'Montserrat', sans-serif; 
             font-size: 28px; 
             font-weight: 800;
-            margin-bottom: 25px; 
-            text-shadow: 0 0 10px rgba(0,0,0,0.7); /* Professional shadow */
+            margin-bottom: 30px; 
+            text-shadow: 0 0 10px rgba(0,0,0,0.7); 
             line-height: 1.3;
         }
+        .cta-buttons { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; /* Ensures buttons are centered horizontally */
+            margin-bottom: 20px;
+        }
         .cta-buttons a { 
-            display: block; 
+            display: inline-flex; /* Use flex to align icon and text */
+            align-items: center;
+            justify-content: center;
             width: 90%; 
-            max-width: 350px; 
-            margin: 12px auto; 
+            max-width: 320px; 
+            margin: 8px auto; 
             padding: 14px 20px; 
             font-weight: 700;
             border: 2px solid transparent;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-radius: 50px; /* Pill shape */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-buttons a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
         .whatsapp-cta { background-color: #25d366; color: white; border-color: #128c7e; }
         .call-cta { background-color: var(--accent-color); color: #333; border-color: #cc9900; }
+        .cta-buttons i { margin-right: 10px; font-size: 20px; }
 
         /* =================================================== */
-        /* 4. LEAD FORM STYLING (3D & ATTRACTIVE) */
+        /* 4. LEAD FORM STYLING (3D & PROFESSIONAL) */
         /* =================================================== */
         .lead-form-container { 
             background: #ffffff; 
@@ -127,127 +142,91 @@
             margin: 30px auto 0; 
             box-shadow: 0 10px 25px rgba(0,0,0,0.3); 
             transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+            border: 1px solid #e0e0e0;
         }
         .lead-form-container:hover {
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             transform: scale(1.01); 
         }
+        /* **Professional 3D Form Header** */
         .lead-form-container p { 
             color: var(--secondary-color); 
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.4em; 
-            font-weight: 700; 
-            padding-bottom: 15px; 
-            border-bottom: 3px solid #f0f0f0; 
-            margin-bottom: 20px;
+            font-size: 1.3em; 
+            font-weight: 800; 
+            padding: 15px 10px;
+            margin-bottom: 25px;
+            
+            /* 3D/Shaded Background Effect */
+            background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* Subtle inner shadow */
         }
         .lead-form input, .lead-form select, .lead-form textarea { 
-            width: 100%; 
-            padding: 14px 10px; 
-            margin-bottom: 18px; 
             border: 2px solid #ccc; 
             border-radius: 8px; 
             font-size: 16px; 
-            box-sizing: border-box; 
-        }
-        .lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus {
-            border-color: var(--primary-color); 
-            box-shadow: 0 0 5px rgba(23, 162, 184, 0.5);
         }
         .lead-form button { 
             background-color: var(--secondary-color); 
-            color: white; 
-            font-weight: bold; 
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 18px;
-            letter-spacing: 1px;
             box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
-            border: none;
-        }
-        .lead-form button:hover {
-            background-color: #c82333;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(220, 53, 69, 0.6);
         }
 
         /* =================================================== */
-        /* 5. REVIEW FORM STYLING (Google-like attractive) */
+        /* 5. REVIEW FORM STYLING */
         /* =================================================== */
         #reviews .lead-form-container {
-            border: 1px solid #ddd;
-            background-color: #fff;
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border: 1px solid #ddd;
         }
 
         /* Star Rating - Google Yellow Color */
-        .rating-stars { 
-            display: inline-block; 
-            direction: rtl;
-            text-align: center;
-            margin-bottom: 20px;
-        }
         .rating-stars label { 
             font-size: 38px; 
             color: #ccc; 
-            transition: color 0.3s, transform 0.1s; 
-            margin: 0 3px; 
         }
         .rating-stars input:checked ~ label { 
             color: var(--accent-color); /* Bright Yellow */
             text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
         }
-        .rating-stars label:hover, .rating-stars label:hover ~ label { 
-            color: var(--accent-color);
-            transform: scale(1.1);
-        }
-
-
+        
         /* =================================================== */
-        /* 6. FOOTER STYLING (Center Alignment) */
+        /* 6. FOOTER STYLING (Center Alignment Confirmed) */
         /* =================================================== */
         footer { 
             background: #333; 
             color: #ccc; 
             padding: 20px 10px; 
-            text-align: center; /* Center alignment for content */
+            text-align: center; 
             font-size: 14px;
         }
         .footer-nav a { 
             color: white; 
-            text-decoration: none; 
             margin: 0 10px; 
             font-size: 16px; 
-            transition: color 0.3s; 
             display: inline-block; 
-            padding: 5px 0;
         }
-        /* Footer text centered by default due to parent's text-align: center */
+        .footer-nav { margin-bottom: 10px; }
 
 
         /* =================================================== */
         /* 7. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
         /* =================================================== */
         @media (min-width: 768px) {
-            .header { padding: 10px 40px; }
-            .menu-toggle { display: none; }
-            .nav { 
-                position: static; 
-                display: flex; 
-                flex-direction: row; 
-                width: auto;
-                box-shadow: none;
-            }
-            .nav a { padding: 0; border-top: none; margin-left: 30px; }
+            .nav { box-shadow: none; }
+            .nav a { margin-left: 30px; }
 
             #hero h1 { font-size: 45px; }
-            .cta-buttons { display: block; }
-            .cta-buttons a { display: inline-block; width: auto; margin: 0 15px; padding: 15px 30px; }
+            .cta-buttons { display: flex; flex-direction: row; } /* Horizontal on desktop */
+            .cta-buttons a { 
+                width: auto; 
+                margin: 0 15px; 
+                padding: 15px 30px; 
+                min-width: 250px;
+            }
             .lead-form-container { padding: 40px; } 
 
             .section { padding: 80px 40px; }
-            .section h3 { font-size: 30px; }
-            
             .grid-container {
                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
                 gap: 30px;
@@ -271,7 +250,8 @@
             <a href="#hero">Home</a>
             <a href="#services">Services</a>
             <a href="#listings">Property</a>
-            <a href="#reviews">Reviews</a> <a href="#contact">Contact</a>
+            <a href="#reviews">Reviews</a> 
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -279,10 +259,10 @@
         <h1>🔑 Your Trusted Partner for Verified Rental Properties in Sanand & Ahmedabad: Flats, Houses, Shops & Offices. Zero Hassle, Maximum Trust.</h1>
         
         <div class="cta-buttons">
-            <a href="https://wa.me/919327008744" target="_blank" class="whatsapp-cta" data-aos="fade-right">
+            <a href="https://wa.me/919327008744" target="_blank" class="whatsapp-cta" data-aos="fade-right" data-aos-duration="1200">
                 <i class="fab fa-whatsapp"></i> WHATSAPP Now
             </a>
-            <a href="tel:+919327008744" class="call-cta" data-aos="fade-left">
+            <a href="tel:+919327008744" class="call-cta" data-aos="fade-left" data-aos-duration="1200">
                 <i class="fas fa-phone"></i> CALL Now
             </a>
         </div>
@@ -482,7 +462,7 @@
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
         </div>
-        <p style="margin-top: 10px; text-align: center;">© 2025 Sanand Rental Broker | Simple process, zero confusion.</p>
+        <p style="margin-top: 10px;">© 2025 Sanand Rental Broker | Simple process, zero confusion.</p>
     </footer>
 
     <div class="whatsapp" style="position: fixed; bottom: 15px; right: 15px; z-index: 1000;">
@@ -504,7 +484,6 @@
             const menuToggle = document.querySelector('.menu-toggle');
             const nav = document.querySelector('.nav');
             
-            // Function to close the menu
             const closeMenu = () => {
                 nav.classList.remove('open');
             };
@@ -513,7 +492,6 @@
                 nav.classList.toggle('open');
             });
             
-            // Auto close menu on link click (important for mobile UX)
             nav.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', closeMenu);
             });
