@@ -15,162 +15,202 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        /* --- 1. General Styles and Font Setup --- */
-        body { font-family: 'Roboto', sans-serif; background: #f4f7f9; margin: 0; color: #333; line-height: 1.6; }
-        .section { padding: 60px 20px; text-align: center; } 
-        .section h3 { font-family: 'Montserrat', sans-serif; font-size: 30px; color: #17a2b8; margin-bottom: 40px; text-align: center; }
+        /* =================================================== */
+        /* 1. BASE STYLES & MOBILE-FIRST DEFAULTS */
+        /* =================================================== */
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            background: #f4f7f9; 
+            margin: 0; 
+            color: #333; 
+            line-height: 1.6; 
+        }
+        .section { 
+            padding: 40px 15px; /* Mobile padding */
+            text-align: center; 
+        } 
+        .section h3 { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 26px; /* Optimized for mobile */
+            color: #17a2b8; 
+            margin-bottom: 30px; 
+            text-align: center; 
+        }
+        .grid-container, .steps-container, .review-widget-container, .map-container, .lead-form-container {
+            max-width: 1100px; 
+            margin: 0 auto;
+            width: 95%;
+        }
 
-        /* --- 2. Header and Navigation --- */
-        .header { background-color: #17a2b8; color: white; padding: 10px 25px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        /* =================================================== */
+        /* 2. HEADER & NAVIGATION */
+        /* =================================================== */
+        .header { 
+            background-color: #17a2b8; 
+            color: white; 
+            padding: 10px 15px; /* Mobile padding */
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
         .logo-container { display: flex; align-items: center; }
-        .logo { height: 45px; margin-right: 15px; border-radius: 5px; }
-        .site-title { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; }
-        .nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 16px; transition: color 0.3s; }
-        .nav a:hover { color: #ffc107; }
-        .menu-toggle { display: none; cursor: pointer; font-size: 30px; }
-        .nav { transition: all 0.3s ease-in-out; }
-
-        /* --- 3. Hero Section & CTA --- */
-        #hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-banner-image-url.jpg') no-repeat center center/cover; color: white; padding: 80px 20px 40px; text-align: center; }
-        #hero h1 { font-family: 'Montserrat', sans-serif; font-size: 38px; margin-bottom: 25px; text-shadow: 2px 2px 4px #000000; }
-        
-        .cta-buttons a { 
-            display: inline-block; 
-            margin: 10px; 
-            padding: 15px 30px; 
-            border-radius: 50px; 
+        .logo { height: 40px; margin-right: 10px; border-radius: 5px; }
+        .site-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; }
+        .menu-toggle { display: block; cursor: pointer; font-size: 26px; }
+        .nav { 
+            position: absolute; 
+            top: 60px; 
+            left: 0; 
+            width: 100%; 
+            background: #17a2b8; 
+            display: none; 
+            flex-direction: column; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        }
+        .nav.open { display: flex; } 
+        .nav a { 
+            color: white; 
             text-decoration: none; 
-            font-weight: bold; 
-            font-size: 18px; 
-            transition: background-color 0.3s, transform 0.2s; 
+            padding: 15px 20px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.2); 
+            text-align: center; 
+            width: 100%; 
+            box-sizing: border-box;
+        }
+
+        /* =================================================== */
+        /* 3. HERO SECTION & CTA BUTTONS (MOBILE OPTIMIZED) */
+        /* =================================================== */
+        #hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
+            color: white; 
+            padding: 60px 15px 30px; 
+            text-align: center; 
+        }
+        #hero h1 { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 28px; /* Mobile size */
+            margin-bottom: 20px; 
+            text-shadow: 2px 2px 4px #000000; 
+        }
+        .cta-buttons { display: flex; flex-direction: column; align-items: center; }
+        .cta-buttons a { 
+            display: block; 
+            width: 90%; /* Take up most of the mobile width */
+            max-width: 350px; 
+            margin: 10px auto; 
+            padding: 12px 20px; 
+            border-radius: 50px; 
+            font-size: 16px; 
         }
         .whatsapp-cta { background-color: #25d366; color: white; }
         .call-cta { background-color: #ffc107; color: #333; }
-        .cta-buttons i { margin-right: 8px; font-size: 20px; } 
+        .cta-buttons i { margin-right: 8px; font-size: 18px; } 
 
-        /* --- 4. Lead Form Section (No Change) --- */
-        .lead-form-container { background: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 10px; max-width: 450px; margin: 30px auto 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; }
-        .lead-form-container p { color: #333; font-weight: 700; margin-top: 0; text-align: center; font-size: 1.2em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .lead-form input, .lead-form select, .lead-form button, .lead-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
-        .lead-form button { background-color: #dc3545; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
+        /* Form styling remains good, just adjusted container width */
+        .lead-form-container { max-width: 90%; padding: 20px; }
 
-        /* --- 5. Responsive Grid Layout for Sections --- */
-        .grid-container { 
+
+        /* =================================================== */
+        /* 4. GRID LAYOUTS (SERVICES, FEATURES, LISTINGS) */
+        /* =================================================== */
+        .grid-container, .property-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 25px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            text-align: left; 
+            grid-template-columns: 1fr; /* Mobile: Single Column */
+            gap: 20px; 
+            padding: 0 10px;
         }
-        .service-card, .feature-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid #17a2b8; transition: transform 0.2s; }
-        .service-card h4, .feature-card h4 { color: #17a2b8; font-size: 20px; margin-top: 0; font-family: 'Montserrat', sans-serif; font-weight: 700; }
-        
-        /* --- 6. How It Works Section (IMPROVED DESIGN) --- */
-        #how-it-works { background-color: white; }
-        .steps-container { max-width: 700px; margin: 0 auto; }
-        .step { 
-            display: flex; 
-            align-items: center; 
-            margin-bottom: 20px; 
-            padding: 15px; 
-            border-radius: 8px; 
-            background: #f8f8f8; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        .service-card, .feature-card, .property-card { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            border-top: 5px solid #17a2b8; 
             text-align: left;
         }
-        .step-number { 
-            counter-increment: step-counter; 
-            background-color: #17a2b8; 
-            color: white; 
-            border-radius: 50%; 
-            width: 38px; 
-            height: 38px; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700; 
-            font-size: 18px; 
-            margin-right: 15px; 
-            flex-shrink: 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .step-number::before { content: counter(step-counter); }
-        .step-text { font-size: 17px; font-weight: 600; color: #555; }
-        .simple-process-text { font-weight: bold; margin-top: 20px; text-align: center; color: #dc3545; font-size: 1.1em; }
 
+        /* =================================================== */
+        /* 5. HOW IT WORKS SECTION (IMPROVED DESIGN) */
+        /* =================================================== */
+        .steps-container { max-width: 600px; padding: 0 10px; }
+        .step { padding: 12px; }
+        .step-text { font-size: 16px; }
 
-        /* --- 7. Property Listing Cards (No Change) --- */
-        .property-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-        }
-        .property-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left; transition: transform 0.3s; }
-        .card-details { padding: 15px; }
-        .price { font-weight: bold; color: #dc3545; font-size: 24px; margin-bottom: 10px; }
-        .property-cta-btn { display: block; width: 100%; text-align: center; padding: 12px 0; margin-top: 10px; background: #ffc107; color: #333; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        /* =================================================== */
+        /* 6. REVIEWS AND MAPS */
+        /* =================================================== */
+        .review-widget-container p { font-size: 1em; }
+        #live-reviews-display { min-height: 200px; }
+        .map-container { max-width: 100%; }
+        .map-container iframe { height: 250px; }
+
+        /* Star rating adjustment for better mobile tap target */
+        .rating-stars label { font-size: 30px; }
+
+        /* =================================================== */
+        /* 7. FOOTER */
+        /* =================================================== */
+        footer { padding: 15px 10px; }
+        .footer-nav a { display: block; margin: 5px 0; } /* Mobile: links stacked */
         
-        /* --- 8. Review Form (IMPROVED STAR RATING) --- */
-        .rating-stars { 
-            display: inline-block; 
-            unicode-bidi: bidi-override;
-            direction: rtl;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        .rating-stars input { display: none; }
-        .rating-stars label { 
-            font-size: 35px; 
-            color: #ccc; 
-            cursor: pointer; 
-            transition: color 0.2s; 
-            display: inline-block;
-            margin: 0 2px; 
-        }
-        .rating-stars input:checked ~ label { color: #ffc107; }
-        .rating-stars label:hover, .rating-stars label:hover ~ label { color: #ffdb58; }
-        
-        /* --- 9. Live Reviews Container Style (Kept the dashed border for visibility until actual code is pasted) --- */
-        #live-reviews-display { 
-            border: 2px dashed #17a2b8; 
-            padding: 20px; 
-            text-align: center; 
-            margin-top: 20px; 
-            min-height: 250px;
-            display: flex; /* Centering the content if any */
-            justify-content: center;
-            align-items: center;
-        }
+        /* Floating CTA */
+        .whatsapp { bottom: 15px; right: 15px; }
 
-        /* --- 10. Footer (No Change) --- */
-        footer { 
-            background: #333; 
-            color: #ccc; 
-            padding: 20px 10px; 
-            text-align: center; 
-            font-size: 14px;
-        }
-        .footer-nav a { 
-            color: white; 
-            text-decoration: none; 
-            margin: 0 10px; 
-            font-size: 16px; 
-            transition: color 0.3s; 
-            display: inline-block; 
-            padding: 5px 0;
-        }
 
-        /* --- 11. Mobile Optimization --- */
-        @media (max-width: 768px) {
-            .cta-buttons a { display: block; width: 90%; margin: 10px auto; font-size: 16px; }
-            .grid-container, .property-grid {
-                grid-template-columns: 1fr; 
-                gap: 20px;
+        /* =================================================== */
+        /* MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
+        /* =================================================== */
+        @media (min-width: 768px) {
+            /* Desktop/Tablet Header */
+            .header { padding: 10px 40px; }
+            .site-title { font-size: 24px; }
+            .menu-toggle { display: none; }
+            .nav { 
+                position: static; 
+                display: flex; 
+                flex-direction: row; 
+                box-shadow: none; 
+                width: auto;
             }
+            .nav a { 
+                padding: 0; 
+                border-top: none; 
+                margin-left: 25px; 
+            }
+
+            /* Hero & CTA */
+            #hero { padding: 100px 40px 60px; }
+            #hero h1 { font-size: 38px; }
+            .cta-buttons { display: block; }
+            .cta-buttons a { 
+                display: inline-block; 
+                width: auto;
+                margin: 0 15px; 
+                padding: 15px 30px;
+            }
+
+            /* Sections */
+            .section { padding: 80px 40px; }
+            .section h3 { font-size: 30px; margin-bottom: 40px; }
+            
+            /* Grid Views */
+            .grid-container {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 30px;
+                padding: 0;
+            }
+            .property-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                padding: 0;
+            }
+
+            /* Footer */
+            .footer-nav a { display: inline-block; margin: 0 15px; }
         }
     </style>
 </head>
@@ -347,9 +387,9 @@
 
     <section id="live-reviews" class="section" style="background-color: white;">
         <h3>⭐ Our Customers Rate Us Highly</h3>
-        <div class="review-widget-container" style="max-width: 800px; margin: 0 auto; padding: 20px;" data-aos="fade-in" data-aos-duration="1500">
+        <div class="review-widget-container" data-aos="fade-in" data-aos-duration="1500">
             
-            <p style="font-size: 1.1em; color: #555;">**Note:** Yahaan aapko apne Google Business Profile (Maps) Reviews Widget ka code daalna hai, jisse reviews apne aap update hote rahenge. Widget code paste karte samay neeche ki dashed line hata dijiye.</p>
+            <p style="font-size: 1.1em; color: #555;">**Note:** Yahaan aapko apne Google Business Profile (Maps) Reviews Widget ka code daalna hai, jisse reviews apne aap update hote rahenge.</p>
             
             <div id="live-reviews-display" style="border: 2px dashed #17a2b8; padding: 50px; text-align: center; margin-top: 20px; min-height: 250px;">
                 <p style="font-weight: bold; color: #aaa;">[Reviews Widget is Loading...]</p>
@@ -397,8 +437,8 @@
             </p>
         </div>
         
-        <div class="map-container" style="max-width: 800px; margin: 20px auto;" data-aos="fade-up">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117498.4128526543!2d72.24724016482613!3d23.015250917260596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e26372d8e489b%3A0xc3af87c699967c74!2sSanand%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1660600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" style="width: 100%; height: 350px; border: 0; border-radius: 10px;"></iframe>
+        <div class="map-container" data-aos="fade-up">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117498.4128526543!2d72.24724016482613!3d23.015250917260596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e26372d8e489b%3A0xc3af87c699967c74!2sSanand%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1660600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" style="width: 100%; height: 250px; border: 0; border-radius: 10px;"></iframe>
         </div>
     </section>
 
@@ -413,7 +453,7 @@
         <p style="margin-top: 10px;">© 2025 Sanand Rental Broker | Simple process, zero confusion.</p>
     </footer>
 
-    <div class="whatsapp" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <div class="whatsapp" style="position: fixed; bottom: 15px; right: 15px; z-index: 1000;">
         <a href="https://wa.me/919327008744" target="_blank">
             <i class="fab fa-whatsapp-square" style="font-size: 55px; color: #25d366; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.4); transition: transform 0.2s;"></i>
         </a>
@@ -427,16 +467,19 @@
             duration: 800, 
         });
         
-        // Simple JS for menu toggle (existing code)
+        // Simple JS for menu toggle 
         document.addEventListener('DOMContentLoaded', () => {
             const menuToggle = document.querySelector('.menu-toggle');
             const nav = document.querySelector('.nav');
             menuToggle.addEventListener('click', () => {
                 nav.classList.toggle('open');
             });
+            // Auto close menu on link click (important for mobile UX)
             nav.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
-                    nav.classList.remove('open');
+                    if (nav.classList.contains('open')) {
+                         nav.classList.remove('open');
+                    }
                 });
             });
         });
