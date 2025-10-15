@@ -32,6 +32,9 @@
             color: #333; 
             line-height: 1.6; 
         }
+        a { text-decoration: none; color: var(--primary-color); transition: color 0.3s; }
+        a:hover { color: #107c8d; }
+
         .section { 
             padding: 40px 15px; 
             text-align: center; 
@@ -44,7 +47,7 @@
             text-align: center; 
             font-weight: 700;
         }
-        .grid-container, .steps-container, .map-container, .lead-form-container {
+        .grid-container, .steps-container, .map-container, .lead-form-container, .property-grid {
             max-width: 1100px; 
             margin: 0 auto;
             width: 95%;
@@ -55,199 +58,213 @@
         /* =================================================== */
         .header { 
             background-color: var(--primary-color); 
-            color: white; 
-            padding: 10px 15px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
             box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
             position: sticky; 
             top: 0; 
             z-index: 1000; 
+            display: flex; justify-content: space-between; align-items: center; padding: 10px 15px;
         }
-        .logo-container { display: flex; align-items: center; }
+        .site-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: white; }
         .logo { height: 40px; margin-right: 10px; border-radius: 5px; }
-        .site-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; }
-        .menu-toggle { display: block; cursor: pointer; font-size: 26px; }
-        .nav { 
-            position: absolute; 
-            top: 60px; 
-            left: 0; 
-            width: 100%; 
-            background: var(--primary-color); 
-            display: none; 
-            flex-direction: column; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .nav.open { display: flex; } 
-        .nav a { 
-            color: white; 
-            padding: 15px 20px; 
-            border-top: 1px solid rgba(255, 255, 255, 0.2); 
-            text-align: center; 
-            font-weight: 600;
-        }
+        .menu-toggle { display: block; cursor: pointer; font-size: 26px; color: white; }
+        .nav { display: none; /* Mobile Menu Hidden by default */ }
+        .nav a { color: white; }
 
         /* =================================================== */
-        /* 3. HERO SECTION (CLEAN H1 & CENTERED CTA) */
+        /* 3. HERO SECTION & CTA */
         /* =================================================== */
-        #hero { 
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
-            color: white; 
-            padding: 60px 15px 30px; 
-            text-align: center; 
-        }
         #hero h1 { 
             font-family: 'Montserrat', sans-serif; 
             font-size: 32px; 
             font-weight: 800;
-            margin-bottom: 30px; 
-            line-height: 1.25;
             text-shadow: 0px 4px 6px rgba(0,0,0,0.8), 0 0 15px var(--primary-color); 
-        }
-        .cta-buttons { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center; 
-            margin-bottom: 25px;
-        }
-        .cta-buttons a { 
-            display: inline-flex; 
-            align-items: center;
-            justify-content: center;
-            width: 90%; 
-            max-width: 320px; 
-            margin: 10px auto; 
-            padding: 16px 20px; 
-            font-weight: 700;
-            border-radius: 50px; 
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3); 
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none; /* Ensure no underline */
-        }
-        .cta-buttons a:hover {
-            transform: translateY(-4px); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         .whatsapp-cta { background-color: #25d366; color: white; border: 2px solid #128c7e; }
         .call-cta { background-color: var(--accent-color); color: #333; border: 2px solid #cc9900; }
-        .cta-buttons i { margin-right: 10px; font-size: 22px; }
 
         /* =================================================== */
-        /* 4. LEAD FORM STYLING */
+        /* 4. FORM STYLING */
         /* =================================================== */
-        .lead-form-container { 
-            background: #ffffff; 
-            padding: 30px; 
-            border-radius: 15px; 
-            max-width: 480px; 
-            margin: 30px auto 0; 
-            box-shadow: 0 12px 30px rgba(0,0,0,0.35); 
-            border: 1px solid #e0e0e0;
-        }
         .lead-form-container p { 
-            color: #b00020; 
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.4em; 
-            font-weight: 800; 
-            padding: 15px 10px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             background: linear-gradient(145deg, #ffe0e0 0%, #ffffff 100%);
-            border-radius: 12px;
             border: 1px solid #ffcccc;
             box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.15); 
-        }
-        .lead-form input, .lead-form select, .lead-form textarea { 
-            width: 100%; 
-            padding: 12px 15px; 
-            margin-bottom: 15px; 
-            border: 2px solid #ddd; 
-            border-radius: 8px; 
-            font-size: 16px; 
-            box-sizing: border-box; 
-        }
-        .lead-form button { 
-            background-color: var(--primary-color); 
-            color: white; 
-            font-weight: bold; 
-            padding: 15px;
-            border-radius: 8px;
-            font-size: 18px;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(23, 162, 184, 0.4);
-            border: none;
-            width: 100%;
+            color: #b00020; 
         }
 
         /* =================================================== */
-        /* 5. CARD STYLING (Services & Features) - FIX APPLIED */
+        /* 5. SERVICES & FEATURES CARDS */
         /* =================================================== */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr; /* Mobile: Single Column */
-            gap: 25px; 
-        }
-
-        /* Fixed Card Design for Service and Features */
+        .grid-container { gap: 25px; }
         .service-card, .feature-card {
             background: white;
             padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft, professional shadow */
-            border-left: 5px solid var(--primary-color); /* Highlight color */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+            border-left: 5px solid var(--primary-color); 
             text-align: left;
             transition: transform 0.3s ease;
         }
-        .service-card:hover, .feature-card:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        .service-card h4, .feature-card h4 { font-weight: 700; }
+
+        /* =================================================== */
+        /* 6. HOW IT WORKS SECTION (NEW DESIGN) */
+        /* =================================================== */
+        #how-it-works { background-color: #f0f8ff; }
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
         }
-        .service-card h4, .feature-card h4 {
+        .step-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+            margin: 15px 0;
+            text-align: left;
+            position: relative;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .step-icon {
+            font-size: 24px;
+            color: white;
+            background: var(--primary-color);
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            margin-right: 15px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            color: #333;
-            margin-top: 0;
-            margin-bottom: 10px;
             font-weight: 700;
         }
-        .service-card p, .feature-card p {
-            font-size: 15px;
-            color: #555;
+        .step-text p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .simple-process-text {
+            margin-top: 30px;
+            font-style: italic;
+            color: var(--secondary-color);
+            font-weight: bold;
         }
 
+        /* =================================================== */
+        /* 7. LISTINGS SECTION (PROFESSIONAL CARDS) */
+        /* =================================================== */
+        .property-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile: Single Column */
+            gap: 25px;
+        }
+        .property-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-details {
+            padding: 20px;
+        }
+        .card-details h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .card-details p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 15px;
+        }
+        .card-details .price {
+            font-size: 1.4em;
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .property-cta-btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            background-color: #25d366;
+            color: white;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .property-cta-btn i {
+            margin-right: 5px;
+        }
+        .property-card .property-cta-btn:nth-child(even) {
+            background-color: var(--primary-color);
+        }
+        
+        /* =================================================== */
+        /* 8. FOOTER (ATTRACTIVE & CENTERED) */
+        /* =================================================== */
+        footer {
+            background-color: #343a40; /* Darker background */
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+        }
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .footer-nav a {
+            color: var(--accent-color); /* Yellow links */
+            margin: 5px 15px; /* Spacing for links */
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .footer-nav a:hover {
+            background-color: rgba(255, 193, 7, 0.2);
+            color: white;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #ccc;
+        }
 
         /* =================================================== */
-        /* 6. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
+        /* 9. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
         /* =================================================== */
         @media (min-width: 768px) {
-            .menu-toggle { display: none; }
             .nav { position: static; display: flex; flex-direction: row; box-shadow: none; width: auto; }
-            .nav a { padding: 0; border-top: none; margin-left: 25px; }
-
-            /* Hero */
-            #hero h1 { font-size: 48px; } 
-            .cta-buttons { flex-direction: row; } 
-            .cta-buttons a { 
-                width: auto; 
-                margin: 0 15px; 
-                padding: 18px 40px; 
-                min-width: 280px;
-            }
-
-            /* Grid Views (Desktop) */
-            .grid-container {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 30px;
-            }
-            .property-grid {
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                gap: 30px;
-            }
+            .steps-container { flex-direction: row; flex-wrap: wrap; justify-content: space-around; }
+            .step-item { max-width: 45%; margin: 20px 1%; } /* Two columns on desktop */
+            .property-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         }
     </style>
 </head>
@@ -269,7 +286,7 @@
     </header>
 
     <section id="hero">
-        <h1>Need a Flat, House, or Shop? Get Verified Rental Property Here — For Family, Bachelors & Professionals.</h1>
+        <h1 data-aos="fade-down" data-aos-duration="1000">Need a Flat, House, or Shop? Get Verified Rental Property Here — For Family, Bachelors & Professionals.</h1>
         
         <div class="cta-buttons">
             <a href="https://wa.me/919327008744" target="_blank" class="whatsapp-cta" data-aos="fade-right" data-aos-duration="1200">
@@ -323,15 +340,15 @@
     <section id="services" class="section">
         <h3>✅ Our Rental Services</h3>
         <div class="grid-container" data-aos="fade-up" data-aos-duration="1000">
-            <div class="service-card" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="service-card" data-aos="zoom-in">
                 <h4>🏠 1 BHK / 2 BHK Flats & Houses</h4>
                 <p>We work exclusively in rental property. If you need a 1 BHK / 2 BHK Flat, Independent House, or Shop & Office, contact us immediately for assistance.</p>
             </div>
-            <div class="service-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
                 <h4>🏡 Independent Houses & Farmhouses</h4>
                 <p>Verified options available for Independent Houses and large properties in Sanand and surrounding areas, perfect for families and executives.</p>
             </div>
-            <div class="service-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
                 <h4>🏢 Shops, Offices & Commercial Space</h4>
                 <p>We provide complete solutions for all your commercial needs, including finding the perfect Shop (Dukan), Office Space, Warehouse, or Godown in prime industrial and market areas.</p>
             </div>
@@ -360,40 +377,40 @@
         </div>
     </section>
     
-    <section id="how-it-works" class="section" data-aos="fade-right">
+    <section id="how-it-works" class="section" data-aos="fade-up">
         <h3>✅ How It Works (Simple Process)</h3>
         <div class="steps-container">
-            <div class="step">
-                <div class="step-number"></div>
-                <div class="step-text">Call or WhatsApp us immediately, or fill out the form above.</div>
+            <div class="step-item" data-aos="fade-right" data-aos-delay="0">
+                <div class="step-icon">1</div>
+                <div class="step-text"><p>Call or WhatsApp us immediately, or fill out the form above.</p></div>
             </div>
-            <div class="step">
-                <div class="step-number"></div>
-                <div class="step-text">Tell us your requirements (Area, Budget, Occupancy Type).</div>
+            <div class="step-item" data-aos="fade-right" data-aos-delay="150">
+                <div class="step-icon">2</div>
+                <div class="step-text"><p>Tell us your requirements (Area, Budget, Occupancy Type).</p></div>
             </div>
-            <div class="step">
-                <div class="step-number"></div>
-                <div class="step-text">We send 2–3 options with photos and details instantly via WhatsApp.</div>
+            <div class="step-item" data-aos="fade-right" data-aos-delay="300">
+                <div class="step-icon">3</div>
+                <div class="step-text"><p>We send 2–3 options with photos and details instantly via WhatsApp.</p></div>
             </div>
-            <div class="step">
-                <div class="step-number"></div>
-                <div class="step-text">View the property, and pay the Brokerage upon finalization.</div>
+            <div class="step-item" data-aos="fade-right" data-aos-delay="450">
+                <div class="step-icon">4</div>
+                <div class="step-text"><p>View the property, and pay the Brokerage upon finalization.</p></div>
             </div>
-            <p class="simple-process-text">Simple process, zero confusion.</p>
+            <p class="simple-process-text" data-aos="zoom-in" data-aos-delay="600">Simple process, zero confusion.</p>
         </div>
     </section>
 
     <section id="listings" class="section">
         <h3>🔍 Featured Rental Property Listings</h3>
-        <div class="property-grid" data-aos="fade-up">
+        <div class="property-grid" data-aos="fade-up" data-aos-duration="1000">
             
             <div class="property-card" data-aos="zoom-in">
                 <img src="https://via.placeholder.com/320x200?text=2+BHK+Sanand+Family" alt="2 BHK Flat for Family in Sanand">
                 <div class="card-details">
                     <h4>Spacious 2 BHK Flat</h4>
                     <p class="price">₹12,000 / Month</p>
-                    <p>📍 Area: Sanand GIDC Road</p>
-                    <p>👨‍👩‍👧‍👦 For Whom: Family Only</p>
+                    <p>📍 Area: **Sanand GIDC Road**</p>
+                    <p>👨‍👩‍👧‍👦 For Whom: **Family Only**</p>
                     <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%202%20BHK%20Sanand%20GIDC%20Flat" target="_blank" class="property-cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp for Details</a>
                 </div>
             </div>
@@ -403,9 +420,9 @@
                 <div class="card-details">
                     <h4>Prime Commercial Shop Space</h4>
                     <p class="price">₹8,500 / Month</p>
-                    <p>📍 Area: Sarkhej Main Bazaar</p>
-                    <p>🏢 For Whom: Commercial/Business</p>
-                    <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%20Shop%20in%20Sarkhej%20Main%20Bazaar" target="_blank" class="property-cta-btn"><i class="fas fa-phone"></i> Call Now / WhatsApp</a>
+                    <p>📍 Area: **Sarkhej Main Bazaar**</p>
+                    <p>🏢 For Whom: **Commercial/Business**</p>
+                    <a href="tel:+919327008744" class="property-cta-btn" style="background-color: var(--primary-color);"><i class="fas fa-phone"></i> Call Now / WhatsApp</a>
                 </div>
             </div>
 
@@ -414,15 +431,15 @@
                 <div class="card-details">
                     <h4>Cozy 1 BHK for Rent</h4>
                     <p class="price">₹6,000 / Month</p>
-                    <p>📍 Area: Changodar Industrial Area</p>
-                    <p>🧑‍🎓 For Whom: Bachelor / Professional</p>
+                    <p>📍 Area: **Changodar Industrial Area**</p>
+                    <p>🧑‍🎓 For Whom: **Bachelor / Professional**</p>
                     <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%201%20BHK%20in%20Changodar%20Area" target="_blank" class="property-cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp for Details</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="submit-review" class="section" style="background-color: #e9ecef;">
+    <section id="submit-review" class="section" style="background-color: white;">
         <h3>✍️ Tell Us About Your Experience</h3>
         <div class="review-form-container lead-form-container" data-aos="fade-left">
              <p style="font-size: 1.2em; font-weight: 700; color: #333; background: #fff; box-shadow: none; border: none; padding-top: 5px;">Your Valuable Feedback Matters!</p>
@@ -475,11 +492,11 @@
             <a href="#submit-review">Reviews</a>
             <a href="#contact">Contact</a>
         </div>
-        <p style="margin-top: 10px; text-align: center;">© 2025 Sanand Rental Broker | Simple process, zero confusion.</p>
+        <p>© 2025 Sanand Rental Broker | Simple process, zero confusion.</p>
     </footer>
 
     <div class="whatsapp" style="position: fixed; bottom: 15px; right: 15px; z-index: 1000;">
-        <a href="https://wa.me/919327008744" target="_blank">
+        <a href="https://wa.me/919327008744" target="_blank" data-aos="zoom-in" data-aos-delay="1000">
             <i class="fab fa-whatsapp-square" style="font-size: 55px; color: #25d366; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.4); transition: transform 0.2s;"></i>
         </a>
     </div>
