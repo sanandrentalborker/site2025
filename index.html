@@ -64,207 +64,191 @@
             z-index: 1000; 
             display: flex; justify-content: space-between; align-items: center; padding: 10px 15px;
         }
-        .site-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: white; }
+        .logo-container { display: flex; align-items: center; }
         .logo { height: 40px; margin-right: 10px; border-radius: 5px; }
+        .site-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: white; }
         .menu-toggle { display: block; cursor: pointer; font-size: 26px; color: white; }
-        .nav { display: none; /* Mobile Menu Hidden by default */ }
-        .nav a { color: white; }
+        .nav { 
+            position: absolute; 
+            top: 60px; 
+            left: 0; 
+            width: 100%; 
+            background: var(--primary-color); 
+            display: none; 
+            flex-direction: column; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .nav.open { display: flex; } 
+        .nav a { 
+            color: white; 
+            padding: 15px 20px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.2); 
+            text-align: center; 
+            font-weight: 600;
+        }
 
         /* =================================================== */
-        /* 3. HERO SECTION & CTA */
+        /* 3. HERO SECTION (CENTERED & CLEANED) */
         /* =================================================== */
+        #hero { 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
+            color: white; 
+            padding: 60px 15px 30px; 
+            text-align: center; 
+        }
         #hero h1 { 
             font-family: 'Montserrat', sans-serif; 
             font-size: 32px; 
             font-weight: 800;
+            margin-bottom: 30px; 
+            line-height: 1.25;
             text-shadow: 0px 4px 6px rgba(0,0,0,0.8), 0 0 15px var(--primary-color); 
+            /* Added margin-left/right auto for centering in large containers */
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 800px; /* Limit width for readability */
+        }
+        .cta-buttons { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            margin-bottom: 25px;
         }
         .whatsapp-cta { background-color: #25d366; color: white; border: 2px solid #128c7e; }
         .call-cta { background-color: var(--accent-color); color: #333; border: 2px solid #cc9900; }
-
-        /* =================================================== */
-        /* 4. FORM STYLING */
-        /* =================================================== */
-        .lead-form-container p { 
-            background: linear-gradient(145deg, #ffe0e0 0%, #ffffff 100%);
-            border: 1px solid #ffcccc;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.15); 
-            color: #b00020; 
-        }
-
-        /* =================================================== */
-        /* 5. SERVICES & FEATURES CARDS */
-        /* =================================================== */
-        .grid-container { gap: 25px; }
-        .service-card, .feature-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
-            border-left: 5px solid var(--primary-color); 
-            text-align: left;
-            transition: transform 0.3s ease;
-        }
-        .service-card h4, .feature-card h4 { font-weight: 700; }
-
-        /* =================================================== */
-        /* 6. HOW IT WORKS SECTION (NEW DESIGN) */
-        /* =================================================== */
-        #how-it-works { background-color: #f0f8ff; }
-        .steps-container {
-            display: flex;
-            flex-direction: column;
+        .cta-buttons a { 
+            display: inline-flex; 
             align-items: center;
-            padding: 20px 0;
-        }
-        .step-item {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            max-width: 500px;
-            margin: 15px 0;
-            text-align: left;
-            position: relative;
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .step-icon {
-            font-size: 24px;
-            color: white;
-            background: var(--primary-color);
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            display: flex;
             justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            margin-right: 15px;
-            font-family: 'Montserrat', sans-serif;
+            width: 90%; 
+            max-width: 320px; 
+            margin: 10px auto; 
+            padding: 16px 20px; 
             font-weight: 700;
-        }
-        .step-text p {
-            margin: 0;
-            font-size: 16px;
-            font-weight: 500;
-        }
-        .simple-process-text {
-            margin-top: 30px;
-            font-style: italic;
-            color: var(--secondary-color);
-            font-weight: bold;
+            border-radius: 50px; 
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3); 
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none; 
         }
 
-        /* =================================================== */
-        /* 7. LISTINGS SECTION (PROFESSIONAL CARDS) */
-        /* =================================================== */
-        .property-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Mobile: Single Column */
-            gap: 25px;
-        }
-        .property-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: left;
+        /* 4. FORM STYLING (CENTERED) */
+        .lead-form-container { 
+            background: #ffffff; 
+            padding: 30px; 
+            border-radius: 15px; 
+            max-width: 400px; /* Reduced max-width for tighter centering */
+            margin: 30px auto 0; /* Ensures proper centering */
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35); 
             border: 1px solid #e0e0e0;
         }
-        .property-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-        }
-        .property-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-        .card-details {
-            padding: 20px;
-        }
-        .card-details h4 {
+        .lead-form-container p { 
+            color: #b00020; 
             font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color);
-            margin-top: 0;
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 1.4em; 
+            font-weight: 800; 
+            padding: 15px 10px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(145deg, #ffe0e0 0%, #ffffff 100%);
+            border-radius: 12px;
+            border: 1px solid #ffcccc;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.15); 
         }
-        .card-details p {
-            margin: 5px 0;
-            color: #555;
-            font-size: 15px;
+        .lead-form input, .lead-form select, .lead-form textarea { 
+            width: 100%; 
+            padding: 12px 15px; 
+            margin-bottom: 15px; 
+            border: 2px solid #ddd; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            box-sizing: border-box; 
         }
-        .card-details .price {
-            font-size: 1.4em;
-            color: var(--secondary-color);
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .property-cta-btn {
-            display: block;
-            text-align: center;
-            padding: 10px;
-            margin-top: 15px;
+        .lead-form button { 
+            background-color: var(--primary-color); 
+            color: white; 
+            font-weight: bold; 
+            padding: 15px;
             border-radius: 8px;
-            background-color: #25d366;
-            color: white;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        .property-cta-btn i {
-            margin-right: 5px;
-        }
-        .property-card .property-cta-btn:nth-child(even) {
-            background-color: var(--primary-color);
-        }
-        
-        /* =================================================== */
-        /* 8. FOOTER (ATTRACTIVE & CENTERED) */
-        /* =================================================== */
-        footer {
-            background-color: #343a40; /* Darker background */
-            color: white;
-            padding: 30px 15px;
-            text-align: center;
-            border-top: 5px solid var(--primary-color);
-        }
-        .footer-nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 15px;
-        }
-        .footer-nav a {
-            color: var(--accent-color); /* Yellow links */
-            margin: 5px 15px; /* Spacing for links */
-            font-weight: 500;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .footer-nav a:hover {
-            background-color: rgba(255, 193, 7, 0.2);
-            color: white;
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
-            color: #ccc;
+            font-size: 18px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(23, 162, 184, 0.4);
+            border: none;
+            width: 100%;
         }
 
         /* =================================================== */
-        /* 9. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
+        /* 5. OTHER SECTIONS (For completeness) */
+        /* =================================================== */
+        .grid-container { display: grid; grid-template-columns: 1fr; gap: 25px; }
+        .service-card, .feature-card {
+            background: white; padding: 25px; border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+            border-left: 5px solid var(--primary-color); 
+            text-align: left; transition: transform 0.3s ease;
+        }
+
+        /* How It Works Steps */
+        #how-it-works { background-color: #f0f8ff; }
+        .steps-container { display: flex; flex-direction: column; align-items: center; padding: 20px 0; }
+        .step-item { display: flex; align-items: center; width: 100%; max-width: 500px; margin: 15px 0; text-align: left; background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .step-icon { font-size: 24px; color: white; background: var(--primary-color); border-radius: 50%; width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; flex-shrink: 0; margin-right: 15px; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        .step-text p { margin: 0; font-size: 16px; font-weight: 500; }
+
+        /* Property Listings */
+        .property-grid {
+            display: grid; grid-template-columns: 1fr; gap: 25px;
+        }
+        .property-card {
+            background: white; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left; border: 1px solid #e0e0e0;
+        }
+        .property-card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-details { padding: 20px; }
+        .card-details h4 { color: var(--primary-color); }
+        .card-details .price { font-size: 1.4em; color: var(--secondary-color); font-weight: 700; }
+        .property-cta-btn {
+            display: block; text-align: center; padding: 10px; margin-top: 15px;
+            border-radius: 8px; background-color: #25d366; color: white; font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40; color: white; padding: 30px 15px;
+            text-align: center; border-top: 5px solid var(--primary-color);
+        }
+        .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 15px; }
+        .footer-nav a { color: var(--accent-color); margin: 5px 15px; font-weight: 500; padding: 5px 10px; border-radius: 5px; }
+
+
+        /* =================================================== */
+        /* 6. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
         /* =================================================== */
         @media (min-width: 768px) {
+            .menu-toggle { display: none; }
             .nav { position: static; display: flex; flex-direction: row; box-shadow: none; width: auto; }
+            .nav a { padding: 0; border-top: none; margin-left: 25px; }
+
+            /* Hero */
+            #hero h1 { font-size: 48px; } 
+            .cta-buttons { flex-direction: row; } 
+            .cta-buttons a { 
+                width: auto; 
+                margin: 0 15px; 
+                padding: 18px 40px; 
+                min-width: 280px;
+            }
+
+            /* Grid Views (Desktop) */
+            .grid-container { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
             .steps-container { flex-direction: row; flex-wrap: wrap; justify-content: space-around; }
-            .step-item { max-width: 45%; margin: 20px 1%; } /* Two columns on desktop */
-            .property-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+            .step-item { max-width: 45%; margin: 20px 1%; } 
+            .property-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         }
     </style>
 </head>
