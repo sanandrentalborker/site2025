@@ -2,26 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <title>Top Rental Broker in Sanand & Ahmedabad - Flats, Houses, Shops for Rent</title>
-    
     <meta name="description" content="Sanand & Ahmedabad ke sabse vishwasniya rental broker. Verified Flats, Houses, or Shops for rent in Sanand, Sarkhej, & Changodar for Family, Bachelors, and Businesses. Zero hassle, low brokerage. Call Now!">
-    
     <meta name="keywords" content="rent house in sanand, flat for rent in sanand, shop for rent in sanand, house on rent in ahmedabad, 1bhk flat sanand, 2bhk rent sanand, commercial property rent sanand, sanand property broker, rental agent ahmedabad">
-    
     <meta name="author" content="Sanand Rental Broker">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta property="og:title" content="Sanand’s Trusted Rental Broker – Flats, Shops & Homes for Rent" />
-    <meta property="og:description" content="We help you find verified rental properties – flats, houses, shops – for families, bachelors, and professionals in Sanand & Ahmedabad." />
-    <meta property="og:image" content="https://yourwebsite.com/your-image.jpg" />
-    <meta property="og:url" content="https://sanandrentalborker.github.io/site2025/" />
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* --- 1. General Styles and Font Setup --- */
         body { font-family: 'Roboto', sans-serif; background: #f4f7f9; margin: 0; color: #333; line-height: 1.6; }
-        .section { padding: 60px 20px; }
+        .section { padding: 60px 20px; text-align: center; } /* Main Section Alignment */
         .section h3 { font-family: 'Montserrat', sans-serif; font-size: 30px; color: #17a2b8; margin-bottom: 40px; text-align: center; }
 
         /* --- 2. Header and Navigation --- */
@@ -37,6 +28,7 @@
         /* --- 3. Hero Section & CTA --- */
         #hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-banner-image-url.jpg') no-repeat center center/cover; color: white; padding: 80px 20px 40px; text-align: center; }
         #hero h1 { font-family: 'Montserrat', sans-serif; font-size: 38px; margin-bottom: 25px; text-shadow: 2px 2px 4px #000000; }
+        
         .cta-buttons a { display: inline-block; margin: 10px; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: background-color 0.3s, transform 0.2s; }
         .whatsapp-cta { background-color: #25d366; color: white; }
         .call-cta { background-color: #ffc107; color: #333; }
@@ -46,7 +38,6 @@
         .lead-form-container p { color: #333; font-weight: 700; margin-top: 0; text-align: center; font-size: 1.2em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         .lead-form input, .lead-form select, .lead-form button, .lead-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
         .lead-form button { background-color: #dc3545; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
-        .lead-form button:hover { background-color: #c82333; }
 
         /* --- 5. Responsive Grid Layout for Sections --- */
         .grid-container { 
@@ -55,22 +46,49 @@
             gap: 25px; 
             max-width: 1200px; 
             margin: 0 auto; 
-            text-align: left; 
+            text-align: left; /* Grid item content is left-aligned */
         }
         .service-card, .feature-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid #17a2b8; transition: transform 0.2s; }
-        .service-card:hover, .feature-card:hover { transform: translateY(-5px); }
         .service-card h4, .feature-card h4 { color: #17a2b8; font-size: 20px; margin-top: 0; font-family: 'Montserrat', sans-serif; font-weight: 700; }
-
-        /* --- 6. Review Form Styles (New) --- */
-        #review-form-section { background-color: white; }
-        .review-form-container { max-width: 600px; margin: 0 auto; }
-        .rating-stars { display: flex; justify-content: center; margin-bottom: 15px; }
-        .rating-stars input[type="radio"] { display: none; }
-        .rating-stars label { font-size: 30px; color: #ccc; cursor: pointer; transition: color 0.2s; }
-        .rating-stars input[type="radio"]:checked ~ label { color: #ffc107; }
-        .rating-stars label:hover, .rating-stars label:hover ~ label { color: #ffdb58; }
         
-        /* --- 7. Mobile Optimization --- */
+        /* --- 6. How It Works Section (Centered Content) --- */
+        .steps-container { max-width: 800px; margin: 0 auto; text-align: left; counter-reset: step-counter; }
+        .step { display: flex; align-items: center; margin-bottom: 20px; padding: 10px; border-radius: 5px; background: #f9f9f9; }
+        .step-number { counter-increment: step-counter; background-color: #28a745; color: white; border-radius: 50%; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 18px; margin-right: 15px; flex-shrink: 0; }
+        
+        /* --- 7. Property Listing Cards --- */
+        .property-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .property-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left; transition: transform 0.3s; }
+        .card-details { padding: 15px; }
+        .price { font-weight: bold; color: #dc3545; font-size: 24px; margin-bottom: 10px; }
+        .property-cta-btn { display: block; width: 100%; text-align: center; padding: 12px 0; margin-top: 10px; background: #ffc107; color: #333; text-decoration: none; font-weight: bold; border-radius: 5px; }
+
+        /* --- 8. Footer (New Centered/Nav Style) --- */
+        footer { 
+            background: #333; 
+            color: #ccc; 
+            padding: 20px 10px; 
+            text-align: center; 
+            font-size: 14px;
+        }
+        .footer-nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 10px; 
+            font-size: 16px; 
+            transition: color 0.3s; 
+            display: inline-block; 
+            padding: 5px 0;
+        }
+        .footer-nav a:hover { color: #ffc107; }
+
+        /* --- 9. Mobile Optimization --- */
         @media (max-width: 768px) {
             .header { padding: 10px 15px; }
             .site-title { font-size: 20px; }
@@ -88,7 +106,6 @@
                 grid-template-columns: 1fr; 
                 gap: 20px;
             }
-            .rating-stars label { font-size: 25px; }
         }
     </style>
 </head>
@@ -114,10 +131,10 @@
         
         <div class="cta-buttons">
             <a href="https://wa.me/919327008744" target="_blank" class="whatsapp-cta">
-                🟢 WhatsApp Now
+                🟢 **<span style="font-size: 1.2em;">WHATSAPP</span>** Now
             </a>
             <a href="tel:+919327008744" class="call-cta">
-                📞 Call Now
+                📞 **<span style="font-size: 1.2em;">CALL</span>** Now
             </a>
         </div>
         
@@ -220,7 +237,7 @@
                 <div class="step-number"></div>
                 <div class="step-text">View the property, and pay the **Brokerage** upon finalization.</div>
             </div>
-            <div class="step-text" style="font-weight: bold; margin-top: 20px;">Simple process, zero confusion.</div>
+            <div class="step-text" style="font-weight: bold; margin-top: 20px; text-align: center;">Simple process, zero confusion.</div>
         </div>
     </section>
 
@@ -260,8 +277,7 @@
                     <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%201%20BHK%20in%20Changodar%20Area" target="_blank" class="property-cta-btn">WhatsApp for Details</a>
                 </div>
             </div>
-            
-            </div>
+        </div>
     </section>
 
     <section id="testimonials" class="section">
@@ -322,18 +338,25 @@
             </p>
         </div>
         
-        <div class="map-container">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117498.4128526543!2d72.24724016482613!3d23.015250917260596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e26372d8e489b%3A0xc3af87c699967c74!2sSanand%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1660600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-container" style="max-width: 800px; margin: 20px auto;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117498.4128526543!2d72.24724016482613!3d23.015250917260596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e26372d8e489b%3A0xc3af87c699967c74!2sSanand%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1660600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" style="width: 100%; height: 350px; border: 0; border-radius: 10px;"></iframe>
         </div>
     </section>
 
     <footer>
-        © 2025 Sanand Rental Broker | Simple process, zero confusion.
+        <div class="footer-nav">
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#listings">Property</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p style="margin-top: 10px;">© 2025 Sanand Rental Broker | Simple process, zero confusion.</p>
     </footer>
 
     <div class="whatsapp" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
         <a href="https://wa.me/919327008744" target="_blank">
-            <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp Chat" style="width: 55px; height: 55px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s;"/>
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" style="width: 55px; height: 55px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.4); transition: transform 0.2s;"/>
         </a>
     </div>
     
