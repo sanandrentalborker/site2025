@@ -54,7 +54,7 @@
         }
 
         /* =================================================== */
-        /* 2. HEADER & NAVIGATION */
+        /* 2. HEADER & NAVIGATION (FIXED ALIGNMENT) */
         /* =================================================== */
         .header { 
             background-color: var(--primary-color); 
@@ -62,11 +62,31 @@
             position: sticky; 
             top: 0; 
             z-index: 1000; 
-            display: flex; justify-content: space-between; align-items: center; padding: 10px 15px;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px 15px;
         }
-        .logo-container { display: flex; align-items: center; }
-        .logo { height: 40px; margin-right: 10px; border-radius: 5px; }
-        .site-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: white; }
+        .logo-container { 
+            display: flex; 
+            align-items: center; /* Vertically center logo and text */
+            flex-shrink: 0; /* Prevent shrinking on small screens */
+        }
+        /* Proper Logo Size */
+        .logo { 
+            height: 40px; 
+            width: 40px; /* Added explicit width for proper fixing */
+            margin-right: 10px; 
+            border-radius: 5px; 
+            object-fit: cover; /* Ensures logo fits well */
+        }
+        .site-title { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 20px; 
+            font-weight: 800; 
+            color: white; 
+            line-height: 1.2; /* Ensures clean alignment */
+        }
         .menu-toggle { display: block; cursor: pointer; font-size: 26px; color: white; }
         .nav { 
             position: absolute; 
@@ -88,7 +108,7 @@
         }
 
         /* =================================================== */
-        /* 3. HERO SECTION (CENTERED & CLEANED) */
+        /* 3. HERO SECTION HEADING (NEW DESIGN) */
         /* =================================================== */
         #hero { 
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
@@ -101,12 +121,17 @@
             font-size: 32px; 
             font-weight: 800;
             margin-bottom: 30px; 
-            line-height: 1.25;
+            line-height: 1.4;
+            /* New Heading Design */
             text-shadow: 0px 4px 6px rgba(0,0,0,0.8), 0 0 15px var(--primary-color); 
-            /* Added margin-left/right auto for centering in large containers */
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+            padding: 15px 10px;
+            border-radius: 10px;
+            border: 2px solid var(--accent-color); /* Highlight border */
+            display: inline-block; /* To contain background/border */
+            max-width: 90%; 
             margin-left: auto;
             margin-right: auto;
-            max-width: 800px; /* Limit width for readability */
         }
         .cta-buttons { 
             display: flex; 
@@ -117,30 +142,14 @@
         }
         .whatsapp-cta { background-color: #25d366; color: white; border: 2px solid #128c7e; }
         .call-cta { background-color: var(--accent-color); color: #333; border: 2px solid #cc9900; }
-        .cta-buttons a { 
-            display: inline-flex; 
-            align-items: center;
-            justify-content: center;
-            width: 90%; 
-            max-width: 320px; 
-            margin: 10px auto; 
-            padding: 16px 20px; 
-            font-weight: 700;
-            border-radius: 50px; 
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3); 
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none; 
-        }
-
+        
         /* 4. FORM STYLING (CENTERED) */
         .lead-form-container { 
             background: #ffffff; 
             padding: 30px; 
             border-radius: 15px; 
-            max-width: 400px; /* Reduced max-width for tighter centering */
-            margin: 30px auto 0; /* Ensures proper centering */
+            max-width: 400px; 
+            margin: 30px auto 0; 
             box-shadow: 0 12px 30px rgba(0,0,0,0.35); 
             border: 1px solid #e0e0e0;
         }
@@ -180,62 +189,27 @@
             width: 100%;
         }
 
-        /* =================================================== */
-        /* 5. OTHER SECTIONS (For completeness) */
-        /* =================================================== */
+        /* 5. OTHER SECTIONS (Steps/Cards) */
         .grid-container { display: grid; grid-template-columns: 1fr; gap: 25px; }
-        .service-card, .feature-card {
-            background: white; padding: 25px; border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
-            border-left: 5px solid var(--primary-color); 
-            text-align: left; transition: transform 0.3s ease;
-        }
-
-        /* How It Works Steps */
+        .service-card, .feature-card { border-left: 5px solid var(--primary-color); }
         #how-it-works { background-color: #f0f8ff; }
-        .steps-container { display: flex; flex-direction: column; align-items: center; padding: 20px 0; }
-        .step-item { display: flex; align-items: center; width: 100%; max-width: 500px; margin: 15px 0; text-align: left; background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .step-icon { font-size: 24px; color: white; background: var(--primary-color); border-radius: 50%; width: 45px; height: 45px; display: flex; justify-content: center; align-items: center; flex-shrink: 0; margin-right: 15px; font-family: 'Montserrat', sans-serif; font-weight: 700; }
-        .step-text p { margin: 0; font-size: 16px; font-weight: 500; }
-
-        /* Property Listings */
-        .property-grid {
-            display: grid; grid-template-columns: 1fr; gap: 25px;
-        }
-        .property-card {
-            background: white; border-radius: 15px; overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: left; border: 1px solid #e0e0e0;
-        }
-        .property-card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-details { padding: 20px; }
+        .step-icon { color: white; background: var(--primary-color); }
+        .property-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+        .property-card { box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
         .card-details h4 { color: var(--primary-color); }
-        .card-details .price { font-size: 1.4em; color: var(--secondary-color); font-weight: 700; }
-        .property-cta-btn {
-            display: block; text-align: center; padding: 10px; margin-top: 15px;
-            border-radius: 8px; background-color: #25d366; color: white; font-weight: 600;
-        }
 
-        /* Footer */
-        footer {
-            background-color: #343a40; color: white; padding: 30px 15px;
-            text-align: center; border-top: 5px solid var(--primary-color);
-        }
-        .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 15px; }
-        .footer-nav a { color: var(--accent-color); margin: 5px 15px; font-weight: 500; padding: 5px 10px; border-radius: 5px; }
-
-
-        /* =================================================== */
         /* 6. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
-        /* =================================================== */
         @media (min-width: 768px) {
             .menu-toggle { display: none; }
             .nav { position: static; display: flex; flex-direction: row; box-shadow: none; width: auto; }
             .nav a { padding: 0; border-top: none; margin-left: 25px; }
 
             /* Hero */
-            #hero h1 { font-size: 48px; } 
+            #hero h1 { 
+                font-size: 48px; 
+                padding: 20px 30px; 
+                max-width: 900px;
+            } 
             .cta-buttons { flex-direction: row; } 
             .cta-buttons a { 
                 width: auto; 
@@ -270,7 +244,7 @@
     </header>
 
     <section id="hero">
-        <h1 data-aos="fade-down" data-aos-duration="1000">Need a Flat, House, or Shop? Get Verified Rental Property Here — For Family, Bachelors & Professionals.</h1>
+        <h1 data-aos="fade-down" data-aos-duration="1000">Lowest Brokerage For Your Perfect Home in Sanand</h1>
         
         <div class="cta-buttons">
             <a href="https://wa.me/919327008744" target="_blank" class="whatsapp-cta" data-aos="fade-right" data-aos-duration="1200">
