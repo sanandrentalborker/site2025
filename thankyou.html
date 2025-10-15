@@ -1,44 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Thank You – Sanand Rental Broker</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 32px;
-      color: #0078D7;
-    }
-    p {
-      font-size: 18px;
-      color: #333;
-      margin-top: 20px;
-    }
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      font-size: 16px;
-      color: #0078D7;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Thank You – Sanand Rental Broker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif; /* Modern font */
+            background: linear-gradient(135deg, #e0f2f7 0%, #cceeff 100%); /* Light blue gradient background */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px; /* More rounded corners */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Stronger shadow */
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 1s ease-out; /* Fade-in animation */
+        }
+        .logo {
+            width: 150px; /* Slightly larger logo */
+            margin-bottom: 25px;
+            border-radius: 8px; /* Slightly rounded logo */
+        }
+        h1 {
+            font-size: 38px;
+            color: #28a745; /* Green for success */
+            margin-bottom: 15px;
+            font-weight: 700; /* Bolder heading */
+        }
+        p {
+            font-size: 19px;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .home-button {
+            display: inline-block;
+            background-color: #007bff; /* Primary blue button */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px; /* Rounded button */
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .home-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+            }
+            .logo {
+                width: 120px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .home-button {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Thank You!</h1>
-  <p>Your details have been submitted successfully.<br>
-     Our team will contact you shortly to help you find the perfect home.</p>
-
-  <a href="https://sanandrentalborker.github.io/site2025/">← Return to Home Page</a>
+    <div class="container">
+        <img src="https://github.com/sanandrentalborker/site2025/blob/main/WhatsApp%20Image%202025-09-18%20at%2018.05.00_6a720cfe.jpg?raw=true" alt="Sanand Rental Broker Logo" class="logo">
+        <h1>Thank You!</h1>
+        <p>
+            Your details have been submitted successfully.<br>
+            Our team will contact you shortly to help you find the perfect home.
+        </p>
+        <a href="https://sanandrentalborker.github.io/site2025/" class="home-button">Return to Home Page</a>
+    </div>
 
 </body>
 </html>
