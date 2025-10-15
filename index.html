@@ -8,7 +8,7 @@
     <meta name="author" content="Sanand Rental Broker">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* CSS code is yahan neeche shuru hoga */
+        /* --- General Styles --- */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #ffffff;
@@ -26,6 +26,9 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky; /* Keeps the nav bar visible when scrolling */
+            top: 0;
+            z-index: 1000;
         }
 
         .logo-container {
@@ -34,9 +37,9 @@
         }
 
         .logo {
-            height: 40px; /* Logo height set for the header */
+            height: 40px; 
             margin-right: 15px;
-            border-radius: 5px; /* A slight rounded corner for the logo */
+            border-radius: 5px; 
         }
 
         .site-title {
@@ -90,6 +93,7 @@
             margin-right: auto;
         }
 
+        /* Form Styling */
         .form-container {
             background: white;
             padding: 30px;
@@ -98,7 +102,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             max-width: 400px;
             width: 100%;
-            text-align: left; /* Align form elements left */
+            text-align: left;
         }
 
         input, select, button {
@@ -108,7 +112,7 @@
             border-radius: 5px;
             border: 1px solid #ddd;
             font-size: 16px;
-            box-sizing: border-box; /* Include padding in width calculation */
+            box-sizing: border-box; 
         }
 
         button {
@@ -193,7 +197,7 @@
         .whatsapp img {
             width: 55px;
             height: 55px;
-            border-radius: 50%; /* Make it round */
+            border-radius: 50%; 
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             transition: transform 0.2s;
         }
@@ -230,7 +234,7 @@
                 font-size: 18px;
             }
             input, select, button {
-                width: 100%; /* Full width on smaller screens */
+                width: 100%;
             }
         }
     </style>
@@ -254,7 +258,7 @@
         <h2>Find 1 BHK, 2 BHK, Flats, and Independent Houses for Rent</h2>
         
         <div class="instruction">
-            **Sirf 1-minute** mein apni zaroorat darj karein. Humari team aapko jald hi call karegi aur aapki pasand ka ghar dhundhne mein madad karegi!
+            Please fill out the form in just **1 minute**! Our team will contact you shortly to help you find the perfect home according to your needs.
         </div>
 
         <div class="form-container">
@@ -283,13 +287,13 @@
         <div class="about-content">
             <h3>About Sanand Rental Broker</h3>
             <p>
-                Sanand Rental Broker Sanand, Ahmedabad area mein sabse kam brokerage par rent par ghar dilaane waali trusted service hai. Humara maqsad aapki mushkilon ko kam karna aur aapko bina kisi extra chinta ke ek behtareen ghar dilana hai.
+                Sanand Rental Broker is a trusted service offering homes for rent in the Sanand, Ahmedabad area with the **lowest brokerage fees**. Our goal is to reduce your hassle and find you the best home without any extra worry.
             </p>
             <p>
-                Hum <strong>1 BHK, 2 BHK flats, independent houses, aur farmhouses</strong> samet har tarah ki properties mein deal karte hain. Humari team aapki zaroorat ko samajhti hai aur aapke budget aur location preference ke hisaab se sabse acchi deals dhoondhti hai.
+                We deal in all types of properties, including **1 BHK, 2 BHK flats, independent houses, and farmhouses**. Our dedicated team understands your needs and finds the best deals based on your budget and location preference.
             </p>
             <p>
-                **Aapko sirf hume batana hai ki aapko kya chahiye, baaki sab hum par chhod dein!**
+                **Just tell us what you need, and leave the rest to us!**
             </p>
         </div>
     </section>
@@ -298,7 +302,7 @@
         <div class="contact-info">
             <h3>Get In Touch</h3>
             <p>
-                Aap hume **seedhe call** kar sakte hain ya **WhatsApp** par message bhej sakte hain:
+                You can **call us directly** or send a **message on WhatsApp**:
             </p>
             <p>
                 📞 **Mobile & WhatsApp:** <a href="tel:+919327008744">+91 93270 08744</a>, 
