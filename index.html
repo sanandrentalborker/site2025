@@ -26,29 +26,29 @@
             line-height: 1.6; 
         }
         .section { 
-            padding: 40px 15px; /* Mobile padding */
+            padding: 40px 15px; 
             text-align: center; 
         } 
         .section h3 { 
             font-family: 'Montserrat', sans-serif; 
-            font-size: 26px; /* Optimized for mobile */
+            font-size: 26px; 
             color: #17a2b8; 
             margin-bottom: 30px; 
             text-align: center; 
         }
-        .grid-container, .steps-container, .review-widget-container, .map-container, .lead-form-container {
+        .grid-container, .steps-container, .map-container {
             max-width: 1100px; 
             margin: 0 auto;
             width: 95%;
         }
 
         /* =================================================== */
-        /* 2. HEADER & NAVIGATION */
+        /* 2. HEADER & NAVIGATION (Responsive) */
         /* =================================================== */
         .header { 
             background-color: #17a2b8; 
             color: white; 
-            padding: 10px 15px; /* Mobile padding */
+            padding: 10px 15px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -57,10 +57,9 @@
             top: 0; 
             z-index: 1000; 
         }
-        .logo-container { display: flex; align-items: center; }
-        .logo { height: 40px; margin-right: 10px; border-radius: 5px; }
-        .site-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; }
-        .menu-toggle { display: block; cursor: pointer; font-size: 26px; }
+        .logo { height: 40px; }
+        .site-title { font-size: 20px; }
+        .menu-toggle { display: block; }
         .nav { 
             position: absolute; 
             top: 60px; 
@@ -69,147 +68,147 @@
             background: #17a2b8; 
             display: none; 
             flex-direction: column; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
         }
         .nav.open { display: flex; } 
         .nav a { 
             color: white; 
-            text-decoration: none; 
             padding: 15px 20px; 
             border-top: 1px solid rgba(255, 255, 255, 0.2); 
             text-align: center; 
-            width: 100%; 
-            box-sizing: border-box;
         }
 
         /* =================================================== */
-        /* 3. HERO SECTION & CTA BUTTONS (MOBILE OPTIMIZED) */
+        /* 3. HERO SECTION & CTA BUTTONS */
         /* =================================================== */
         #hero { 
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
             color: white; 
             padding: 60px 15px 30px; 
-            text-align: center; 
         }
-        #hero h1 { 
-            font-family: 'Montserrat', sans-serif; 
-            font-size: 28px; /* Mobile size */
-            margin-bottom: 20px; 
-            text-shadow: 2px 2px 4px #000000; 
-        }
+        #hero h1 { font-size: 28px; }
         .cta-buttons { display: flex; flex-direction: column; align-items: center; }
         .cta-buttons a { 
             display: block; 
-            width: 90%; /* Take up most of the mobile width */
+            width: 90%; 
             max-width: 350px; 
             margin: 10px auto; 
             padding: 12px 20px; 
-            border-radius: 50px; 
-            font-size: 16px; 
         }
         .whatsapp-cta { background-color: #25d366; color: white; }
         .call-cta { background-color: #ffc107; color: #333; }
-        .cta-buttons i { margin-right: 8px; font-size: 18px; } 
-
-        /* Form styling remains good, just adjusted container width */
-        .lead-form-container { max-width: 90%; padding: 20px; }
-
 
         /* =================================================== */
-        /* 4. GRID LAYOUTS (SERVICES, FEATURES, LISTINGS) */
+        /* 4. LEAD FORM STYLING (3D & ATTRACTIVE) */
+        /* =================================================== */
+        .lead-form-container { 
+            background: #ffffff; /* Pure white background for high contrast */
+            padding: 30px; 
+            border-radius: 15px; 
+            max-width: 450px; 
+            margin: 30px auto 0; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Stronger shadow for 3D depth */
+            border: 1px solid #ddd;
+            transform: perspective(1px) translateZ(0); /* For subtle lift effect */
+            transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+        }
+        .lead-form-container:hover {
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            transform: scale(1.02); /* Slight lift on hover */
+        }
+        .lead-form-container p { 
+            color: #dc3545; /* Highlight title color */
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4em; 
+            font-weight: 700; 
+            margin-top: 0; 
+            padding-bottom: 15px; 
+            border-bottom: 3px solid #f0f0f0; 
+            margin-bottom: 20px;
+        }
+        .lead-form input, .lead-form select { 
+            width: 100%; 
+            padding: 14px 10px; /* Bigger input fields */
+            margin-bottom: 18px; 
+            border: 2px solid #ccc; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            box-sizing: border-box; 
+            transition: border-color 0.3s;
+        }
+        .lead-form input:focus, .lead-form select:focus {
+            border-color: #17a2b8; /* Highlight on focus */
+            outline: none;
+            box-shadow: 0 0 5px rgba(23, 162, 184, 0.5);
+        }
+        .lead-form button { 
+            background-color: #dc3545; 
+            color: white; 
+            font-weight: bold; 
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer; 
+            font-size: 18px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
+        }
+        .lead-form button:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(220, 53, 69, 0.6);
+        }
+        
+        /* =================================================== */
+        /* 5. GENERAL SECTIONS (Responsive Grids) */
         /* =================================================== */
         .grid-container, .property-grid { 
             display: grid; 
-            grid-template-columns: 1fr; /* Mobile: Single Column */
+            grid-template-columns: 1fr; /* Mobile Default */
             gap: 20px; 
-            padding: 0 10px;
         }
         .service-card, .feature-card, .property-card { 
             background: white; 
             padding: 20px; 
             border-radius: 10px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
             border-top: 5px solid #17a2b8; 
-            text-align: left;
         }
-
-        /* =================================================== */
-        /* 5. HOW IT WORKS SECTION (IMPROVED DESIGN) */
-        /* =================================================== */
-        .steps-container { max-width: 600px; padding: 0 10px; }
-        .step { padding: 12px; }
-        .step-text { font-size: 16px; }
-
-        /* =================================================== */
-        /* 6. REVIEWS AND MAPS */
-        /* =================================================== */
-        .review-widget-container p { font-size: 1em; }
-        #live-reviews-display { min-height: 200px; }
-        .map-container { max-width: 100%; }
-        .map-container iframe { height: 250px; }
-
-        /* Star rating adjustment for better mobile tap target */
-        .rating-stars label { font-size: 30px; }
-
-        /* =================================================== */
-        /* 7. FOOTER */
-        /* =================================================== */
-        footer { padding: 15px 10px; }
-        .footer-nav a { display: block; margin: 5px 0; } /* Mobile: links stacked */
-        
-        /* Floating CTA */
-        .whatsapp { bottom: 15px; right: 15px; }
+        .property-card { overflow: hidden; }
+        .property-card img { width: 100%; height: auto; display: block; }
 
 
         /* =================================================== */
-        /* MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
+        /* 6. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
         /* =================================================== */
         @media (min-width: 768px) {
-            /* Desktop/Tablet Header */
             .header { padding: 10px 40px; }
-            .site-title { font-size: 24px; }
             .menu-toggle { display: none; }
             .nav { 
                 position: static; 
                 display: flex; 
                 flex-direction: row; 
-                box-shadow: none; 
                 width: auto;
             }
-            .nav a { 
-                padding: 0; 
-                border-top: none; 
-                margin-left: 25px; 
-            }
+            .nav a { padding: 0; border-top: none; margin-left: 25px; }
 
-            /* Hero & CTA */
-            #hero { padding: 100px 40px 60px; }
             #hero h1 { font-size: 38px; }
             .cta-buttons { display: block; }
-            .cta-buttons a { 
-                display: inline-block; 
-                width: auto;
-                margin: 0 15px; 
-                padding: 15px 30px;
-            }
+            .cta-buttons a { display: inline-block; width: auto; margin: 0 15px; padding: 15px 30px; }
+            .lead-form-container { padding: 40px; } /* Bigger padding on desktop */
 
-            /* Sections */
             .section { padding: 80px 40px; }
-            .section h3 { font-size: 30px; margin-bottom: 40px; }
+            .section h3 { font-size: 30px; }
             
-            /* Grid Views */
             .grid-container {
                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
                 gap: 30px;
-                padding: 0;
             }
             .property-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 gap: 30px;
-                padding: 0;
             }
 
-            /* Footer */
+            footer { padding: 20px 40px; }
             .footer-nav a { display: inline-block; margin: 0 15px; }
         }
     </style>
@@ -226,7 +225,6 @@
             <a href="#hero">Home</a>
             <a href="#services">Services</a>
             <a href="#listings">Property</a>
-            <a href="#live-reviews">Live Reviews</a> 
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -385,20 +383,8 @@
         </div>
     </section>
 
-    <section id="live-reviews" class="section" style="background-color: white;">
-        <h3>⭐ Our Customers Rate Us Highly</h3>
-        <div class="review-widget-container" data-aos="fade-in" data-aos-duration="1500">
-            
-            <p style="font-size: 1.1em; color: #555;">**Note:** Yahaan aapko apne Google Business Profile (Maps) Reviews Widget ka code daalna hai, jisse reviews apne aap update hote rahenge.</p>
-            
-            <div id="live-reviews-display" style="border: 2px dashed #17a2b8; padding: 50px; text-align: center; margin-top: 20px; min-height: 250px;">
-                <p style="font-weight: bold; color: #aaa;">[Reviews Widget is Loading...]</p>
-            </div>
-            </div>
-    </section>
-
-    <section id="submit-review" class="section" style="background-color: #e9ecef;">
-        <h3>✍️ Submit Your Review (If you don't have a Google account)</h3>
+    <section id="reviews" class="section" style="background-color: #e9ecef;">
+        <h3>✍️ Submit Your Experience</h3>
         <div class="review-form-container lead-form-container" data-aos="fade-left">
              <p>Tell Us About Your Experience</p>
              <form class="lead-form" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST">
@@ -447,7 +433,6 @@
             <a href="#hero">Home</a>
             <a href="#services">Services</a>
             <a href="#listings">Property</a>
-            <a href="#live-reviews">Live Reviews</a>
             <a href="#contact">Contact</a>
         </div>
         <p style="margin-top: 10px;">© 2025 Sanand Rental Broker | Simple process, zero confusion.</p>
@@ -467,7 +452,7 @@
             duration: 800, 
         });
         
-        // Simple JS for menu toggle 
+        // Simple JS for mobile menu toggle 
         document.addEventListener('DOMContentLoaded', () => {
             const menuToggle = document.querySelector('.menu-toggle');
             const nav = document.querySelector('.nav');
