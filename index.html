@@ -27,22 +27,28 @@
         .site-title { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; }
         .nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 16px; transition: color 0.3s; }
         .nav a:hover { color: #ffc107; }
+        
+        /* HIDDEN MENU ICON (Only visible on mobile) */
+        .menu-toggle { display: none; cursor: pointer; font-size: 30px; }
+        .nav { transition: all 0.3s ease-in-out; }
+
 
         /* --- 3. Hero Section & CTA --- */
         #hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-banner-image-url.jpg') no-repeat center center/cover; color: white; padding: 80px 20px 40px; text-align: center; }
         #hero h1 { font-family: 'Montserrat', sans-serif; font-size: 38px; margin-bottom: 25px; text-shadow: 2px 2px 4px #000000; }
         
-        .cta-buttons a { display: inline-block; margin: 10px; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: background-color 0.3s; }
+        .cta-buttons a { display: inline-block; margin: 10px; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: background-color 0.3s, transform 0.2s; }
         .whatsapp-cta { background-color: #25d366; color: white; }
         .call-cta { background-color: #ffc107; color: #333; }
         
         /* --- 4. Lead Form Section --- */
         .lead-form-container { background: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 10px; max-width: 450px; margin: 30px auto 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; }
-        .lead-form-container p { color: #333; font-weight: 600; margin-top: 0; text-align: center; font-size: 1.1em; }
+        .lead-form-container p { color: #333; font-weight: 700; margin-top: 0; text-align: center; font-size: 1.2em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         .lead-form input, .lead-form select, .lead-form button { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
-        .lead-form button { background-color: #dc3545; color: white; font-weight: bold; cursor: pointer; }
+        .lead-form button { background-color: #dc3545; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
+        .lead-form button:hover { background-color: #c82333; }
         
-        /* --- 5. Responsive Grid Layout for Services and Why Choose Us --- */
+        /* --- 5. Responsive Grid Layout for Sections --- */
         .grid-container { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -51,13 +57,14 @@
             margin: 0 auto; 
             text-align: left; 
         }
-        .service-card, .feature-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 3px solid #17a2b8; }
-        .service-card h4, .feature-card h4 { color: #17a2b8; font-size: 20px; margin-top: 0; font-family: 'Montserrat', sans-serif; }
+        .service-card, .feature-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid #17a2b8; transition: transform 0.2s; }
+        .service-card:hover, .feature-card:hover { transform: translateY(-5px); }
+        .service-card h4, .feature-card h4 { color: #17a2b8; font-size: 20px; margin-top: 0; font-family: 'Montserrat', sans-serif; font-weight: 700; }
 
         /* --- 6. How It Works Section --- */
         #how-it-works { background-color: white; }
         .steps-container { max-width: 800px; margin: 0 auto; text-align: left; counter-reset: step-counter; }
-        .step { display: flex; align-items: center; margin-bottom: 20px; }
+        .step { display: flex; align-items: center; margin-bottom: 20px; padding: 10px; border-radius: 5px; background: #f9f9f9; }
         .step-number { counter-increment: step-counter; background-color: #28a745; color: white; border-radius: 50%; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 18px; margin-right: 15px; flex-shrink: 0; }
         .step-text { font-size: 17px; }
 
@@ -70,20 +77,64 @@
             max-width: 1200px; 
             margin: 0 auto; 
         }
-        .property-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left; transition: transform 0.3s; }
+        .property-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left; transition: transform 0.3s; }
+        .property-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
         .property-card img { width: 100%; height: 200px; object-fit: cover; }
         .card-details { padding: 15px; }
-        .price { font-weight: bold; color: #28a745; font-size: 22px; margin-bottom: 10px; }
-        .property-cta-btn { display: block; width: 100%; text-align: center; padding: 10px 0; margin-top: 10px; background: #ffc107; color: #333; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        .price { font-weight: bold; color: #dc3545; /* Changed price color to Red/Danger for attention */ font-size: 24px; margin-bottom: 10px; }
+        .property-cta-btn { display: block; width: 100%; text-align: center; padding: 12px 0; margin-top: 10px; background: #ffc107; color: #333; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s; }
+        .property-cta-btn:hover { background-color: #ff9900; }
 
-        /* --- 8. Mobile Responsiveness Adjustments (Ensuring full screen usage on small devices) --- */
+
+        /* --- 8. Mobile Optimization (The Key Changes for Attractive Mobile View) --- */
         @media (max-width: 768px) {
-            #hero h1 { font-size: 28px; }
-            .section { padding: 40px 15px; }
+            
+            /* Header & Navigation Adjustments */
+            .header { padding: 10px 15px; }
+            .site-title { font-size: 20px; }
+            .nav { 
+                position: absolute; 
+                top: 65px; /* Adjust based on header height */
+                left: 0; 
+                width: 100%; 
+                background: #17a2b8; 
+                display: none; /* Hidden by default */
+                flex-direction: column; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            }
+            .nav.open { display: flex; } /* Show when toggled */
+            .nav a { 
+                margin: 0; 
+                padding: 15px 20px; 
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                text-align: center;
+                width: 100%;
+            }
+            .menu-toggle { display: block; }
+            
+            /* Hero Section Adjustments */
+            #hero { padding: 60px 15px 30px; }
+            #hero h1 { font-size: 26px; }
+
+            /* CTA Button Stack */
             .cta-buttons a { 
                 display: block; 
-                width: 80%;
+                width: 90%;
                 margin: 10px auto;
+                font-size: 16px;
+            }
+            
+            /* Form Optimization */
+            .lead-form-container { max-width: 100%; margin: 20px auto 0; }
+
+            /* General Section Spacing */
+            .section { padding: 40px 15px; }
+            .section h3 { font-size: 24px; margin-bottom: 25px; }
+            
+            /* Card Grid is already responsive, just ensure full width use */
+            .grid-container, .property-grid {
+                grid-template-columns: 1fr; /* Force single column stack for clarity on small screens */
+                gap: 20px;
             }
         }
     </style>
@@ -95,6 +146,8 @@
             <img src="https://github.com/sanandrentalborker/site2025/blob/main/WhatsApp%20Image%202025-09-18%20at%2018.05.00_6a720cfe.jpg?raw=true" alt="Sanand Rental Broker Logo" class="logo">
             <span class="site-title">Sanand Rental Broker</span>
         </div>
+        <div class="menu-toggle" onclick="document.querySelector('.nav').classList.toggle('open')">☰</div>
+        
         <nav class="nav">
             <a href="#hero">Home</a>
             <a href="#services">Services</a>
@@ -262,15 +315,15 @@
 
     <section id="testimonials" class="section" style="background-color: white;">
         <h3>✅ Client Reviews</h3>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
+        <div class="grid-container">
+            <div class="service-card testimonial-card">
                 <p>“I found a 1BHK in just 1 day—and it was affordable too!”</p>
                 <div class="client-info">
                     <img src="https://via.placeholder.com/50" alt="Client Photo">
                     <span style="font-weight: bold;">— Ravi, Bachelor, Sanand</span>
                 </div>
             </div>
-            <div class="testimonial-card">
+            <div class="service-card testimonial-card">
                 <p>“Professional service & verified property – thank you!”</p>
                 <div class="client-info">
                     <img src="https://via.placeholder.com/50" alt="Client Photo">
@@ -306,6 +359,23 @@
             <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp Chat" style="width: 55px; height: 55px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s;"/>
         </a>
     </div>
+    
+    <script>
+        // Simple JS for menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.nav');
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('open');
+            });
+            // Close menu when a link is clicked
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('open');
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
