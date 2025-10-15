@@ -72,7 +72,7 @@
         .nav a { color: white; padding: 15px 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); text-align: center; font-weight: 600; }
 
         /* =================================================== */
-        /* 3. HERO SECTION & CTA BUTTONS (PROFESSIONAL LOOK) */
+        /* 3. HERO SECTION & CTA BUTTONS */
         /* =================================================== */
         #hero { 
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
@@ -104,18 +104,68 @@
         .lead-form button:hover { background-color: #107c8d; }
 
         /* =================================================== */
-        /* 4. SERVICES / WHY US / LISTINGS (IMPROVED CARD DESIGN) */
+        /* 4. SERVICES / WHY US / LISTINGS (UPDATED VIBRANT DESIGN) */
         /* =================================================== */
-        .service-card, .feature-card {
+
+        /* VIBRANT CARD STYLES FOR SERVICES */
+        .service-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f0f8ff 100%); /* Light Blue Gradient */
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(23, 162, 184, 0.2); /* Shadow with Primary Color hint */
+            border: 1px solid #e0f0ff;
+            transition: transform 0.4s, box-shadow 0.4s;
+            text-align: left;
+        }
+        .service-card h4 { 
+            color: var(--primary-color); 
+            font-size: 1.5em; 
+            font-weight: 700; 
+            margin-top: 0; 
+            display: flex; align-items: center; 
+        }
+        .service-card h4 i { 
+            font-size: 1.2em; 
+            margin-right: 10px; 
+            color: var(--accent-color); 
+            background: var(--primary-color); 
+            padding: 8px; border-radius: 50%; 
+            line-height: 1;
+        }
+        .service-card:hover { 
+            transform: scale(1.03); 
+            box-shadow: 0 12px 35px rgba(23, 162, 184, 0.4); 
+            border-color: var(--primary-color);
+        }
+
+        /* HIGH-IMPACT FEATURE CARD STYLES FOR WHY CHOOSE US */
+        .feature-card {
             background: white;
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-left: 5px solid var(--primary-color);
+            border-left: 5px solid var(--secondary-color); /* Red Accent */
             transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
         }
-        .service-card h4, .feature-card h4 { color: #333; font-size: 1.3em; font-weight: 700; margin-top: 0; }
-        .service-card:hover, .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .feature-card h4 { 
+            color: var(--secondary-color); /* Red for emphasis */
+            font-size: 1.3em; 
+            font-weight: 700; 
+            margin-top: 0; 
+            display: flex; align-items: center; 
+        }
+        .feature-card h4 i {
+            font-size: 1.1em;
+            margin-right: 8px;
+            color: #28a745; /* Green Checkmark */
+        }
+        .feature-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+            border-color: var(--primary-color); 
+        }
+
 
         /* Property Card Styling */
         .property-card {
@@ -329,15 +379,15 @@
         <h3>✅ Our Rental Services</h3>
         <div class="grid-container" data-aos="fade-up" data-aos-duration="1000">
             <div class="service-card" data-aos="zoom-in">
-                <h4>🏠 1 BHK / 2 BHK Flats & Houses</h4>
+                <h4><i class="fas fa-home"></i> 1 BHK / 2 BHK Flats & Houses</h4>
                 <p>We work exclusively in rental property. If you need a 1 BHK / 2 BHK Flat, Independent House, or Shop & Office, contact us immediately for assistance.</p>
             </div>
             <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                <h4>🏡 Independent Houses & Farmhouses</h4>
+                <h4><i class="fas fa-house-user"></i> Independent Houses & Farmhouses</h4>
                 <p>Verified options available for Independent Houses and large properties in Sanand and surrounding areas, perfect for families and executives.</p>
             </div>
             <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                <h4>🏢 Shops, Offices & Commercial Space</h4>
+                <h4><i class="fas fa-building"></i> Shops, Offices & Commercial Space</h4>
                 <p>We provide complete solutions for all your commercial needs, including finding the perfect Shop (Dukan), Office Space, Warehouse, or Godown in prime industrial and market areas.</p>
             </div>
         </div>
@@ -347,19 +397,19 @@
         <h3>✅ Why Choose Us</h3>
         <div class="grid-container" data-aos="fade-up" data-aos-duration="1000">
             <div class="feature-card" data-aos="flip-up">
-                <h4>✔ Local Expert in Sanand & Ahmedabad</h4>
+                <h4><i class="fas fa-check-circle"></i> Local Expert in Sanand & Ahmedabad</h4>
                 <p>Years of local experience. We know the best areas and properties to suit your budget and requirements.</p>
             </div>
             <div class="feature-card" data-aos="flip-up" data-aos-delay="100">
-                <h4>✔ Verified Properties – No Time Waste</h4>
+                <h4><i class="fas fa-check-circle"></i> Verified Properties – No Time Waste</h4>
                 <p>We only show Verified Properties. We value your time and ensure quick and hassle-free viewings.</p>
             </div>
             <div class="feature-card" data-aos="flip-up" data-aos-delay="200">
-                <h4>✔ Family & Bachelor Separate List</h4>
+                <h4><i class="fas fa-check-circle"></i> Family & Bachelor Separate List</h4>
                 <p>We maintain separate property lists to match landlord preferences, making the final deal much easier.</p>
             </div>
             <div class="feature-card" data-aos="flip-up" data-aos-delay="300">
-                <h4>✔ Fast Service, Clear Brokerage</h4>
+                <h4><i class="fas fa-check-circle"></i> Fast Service, Clear Brokerage</h4>
                 <p>The deal closes quickly, and our brokerage policy is transparent with no hidden charges.</p>
             </div>
         </div>
