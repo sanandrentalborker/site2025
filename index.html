@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rental Property Broker in Sanand – Flats, Shops & Homes for Rent</title>
-    <meta name="description" content="Need a rental home, shop, or flat in Sanand or Ahmedabad? We help families, bachelors, and professionals find verified rental properties. Lowest brokerage guaranteed!">
-    <meta name="keywords" content="Rental property Sanand, Flat for rent Sanand, Shop for rent Ahmedabad, Property broker Sanand, Rental house Ahmedabad, 1BHK rent, 2BHK rent, Family rental Sanand, Bachelor room rent Ahmedabad">
+    <title>Top Rental Broker in Sanand & Ahmedabad - Flats, Houses, Shops for Rent</title>
+    <meta name="description" content="Sanand & Ahmedabad ke sabse vishwasniya rental broker. Verified Flats, Houses, or Shops for rent in Sanand, Sarkhej, & Changodar for Family, Bachelors, and Businesses. Zero hassle, low brokerage. Call Now!">
+    <meta name="keywords" content="rent house in sanand, flat for rent in sanand, shop for rent in sanand, house on rent in ahmedabad, 1bhk flat sanand, 2bhk rent sanand, commercial property rent sanand, sanand property broker, rental agent ahmedabad">
     <meta name="author" content="Sanand Rental Broker">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="Sanand’s Trusted Rental Broker – Flats, Shops & Homes for Rent" />
-    <meta property="og:description" content="We help you find verified rental properties – flats, houses, shops – for families, bachelors, and professionals in Sanand & Ahmedabad." />
-    <meta property="og:image" content="https://yourwebsite.com/your-image.jpg" />
-    <meta property="og:url" content="https://sanandrentalborker.github.io/site2025/" />
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         /* --- 1. General Styles and Font Setup --- */
         body { font-family: 'Roboto', sans-serif; background: #f4f7f9; margin: 0; color: #333; line-height: 1.6; }
-        .section { padding: 60px 20px; }
+        .section { padding: 60px 20px; text-align: center; } 
         .section h3 { font-family: 'Montserrat', sans-serif; font-size: 30px; color: #17a2b8; margin-bottom: 40px; text-align: center; }
 
         /* --- 2. Header and Navigation --- */
@@ -27,27 +25,33 @@
         .site-title { font-family: 'Montserrat', sans-serif; font-size: 24px; font-weight: 700; }
         .nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 16px; transition: color 0.3s; }
         .nav a:hover { color: #ffc107; }
-        
-        /* HIDDEN MENU ICON (Only visible on mobile) */
         .menu-toggle { display: none; cursor: pointer; font-size: 30px; }
         .nav { transition: all 0.3s ease-in-out; }
-
 
         /* --- 3. Hero Section & CTA --- */
         #hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-banner-image-url.jpg') no-repeat center center/cover; color: white; padding: 80px 20px 40px; text-align: center; }
         #hero h1 { font-family: 'Montserrat', sans-serif; font-size: 38px; margin-bottom: 25px; text-shadow: 2px 2px 4px #000000; }
         
-        .cta-buttons a { display: inline-block; margin: 10px; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: background-color 0.3s, transform 0.2s; }
+        .cta-buttons a { 
+            display: inline-block; 
+            margin: 10px; 
+            padding: 15px 30px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 18px; 
+            transition: background-color 0.3s, transform 0.2s; 
+        }
         .whatsapp-cta { background-color: #25d366; color: white; }
         .call-cta { background-color: #ffc107; color: #333; }
-        
+        .cta-buttons i { margin-right: 8px; font-size: 20px; } /* Icon spacing */
+
         /* --- 4. Lead Form Section --- */
         .lead-form-container { background: rgba(255, 255, 255, 0.95); padding: 25px; border-radius: 10px; max-width: 450px; margin: 30px auto 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; }
         .lead-form-container p { color: #333; font-weight: 700; margin-top: 0; text-align: center; font-size: 1.2em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .lead-form input, .lead-form select, .lead-form button { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
+        .lead-form input, .lead-form select, .lead-form button, .lead-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
         .lead-form button { background-color: #dc3545; color: white; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
-        .lead-form button:hover { background-color: #c82333; }
-        
+
         /* --- 5. Responsive Grid Layout for Sections --- */
         .grid-container { 
             display: grid; 
@@ -58,18 +62,44 @@
             text-align: left; 
         }
         .service-card, .feature-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid #17a2b8; transition: transform 0.2s; }
-        .service-card:hover, .feature-card:hover { transform: translateY(-5px); }
         .service-card h4, .feature-card h4 { color: #17a2b8; font-size: 20px; margin-top: 0; font-family: 'Montserrat', sans-serif; font-weight: 700; }
-
-        /* --- 6. How It Works Section --- */
+        
+        /* --- 6. How It Works Section (ATTRACTIVE DESIGN) --- */
         #how-it-works { background-color: white; }
-        .steps-container { max-width: 800px; margin: 0 auto; text-align: left; counter-reset: step-counter; }
-        .step { display: flex; align-items: center; margin-bottom: 20px; padding: 10px; border-radius: 5px; background: #f9f9f9; }
-        .step-number { counter-increment: step-counter; background-color: #28a745; color: white; border-radius: 50%; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 18px; margin-right: 15px; flex-shrink: 0; }
-        .step-text { font-size: 17px; }
+        .steps-container { max-width: 700px; margin: 0 auto; }
+        .step { 
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 20px; 
+            padding: 15px; 
+            border-radius: 8px; 
+            background: #f8f8f8; /* Light background for contrast */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .step-number { 
+            counter-increment: step-counter; 
+            background-color: #17a2b8; /* Primary color */
+            color: white; 
+            border-radius: 50%; 
+            width: 38px; 
+            height: 38px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700; 
+            font-size: 18px; 
+            margin-right: 15px; 
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .step-number::before { content: counter(step-counter); }
+        .step-text { font-size: 17px; font-weight: 600; color: #555; }
+        .simple-process-text { font-weight: bold; margin-top: 20px; text-align: center; color: #dc3545; font-size: 1.1em; }
 
-        /* --- 7. Property Listing Cards (Highly Responsive) --- */
-        #listings { background-color: #f4f7f9; }
+
+        /* --- 7. Property Listing Cards (No Change) --- */
         .property-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -78,62 +108,62 @@
             margin: 0 auto; 
         }
         .property-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: left; transition: transform 0.3s; }
-        .property-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-        .property-card img { width: 100%; height: 200px; object-fit: cover; }
         .card-details { padding: 15px; }
-        .price { font-weight: bold; color: #dc3545; /* Changed price color to Red/Danger for attention */ font-size: 24px; margin-bottom: 10px; }
-        .property-cta-btn { display: block; width: 100%; text-align: center; padding: 12px 0; margin-top: 10px; background: #ffc107; color: #333; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s; }
-        .property-cta-btn:hover { background-color: #ff9900; }
+        .price { font-weight: bold; color: #dc3545; font-size: 24px; margin-bottom: 10px; }
+        .property-cta-btn { display: block; width: 100%; text-align: center; padding: 12px 0; margin-top: 10px; background: #ffc107; color: #333; text-decoration: none; font-weight: bold; border-radius: 5px; }
+        
+        /* --- 8. Review Form (IMPROVED STAR RATING) --- */
+        .rating-stars { 
+            display: inline-block; /* Center the rating block */
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .rating-stars input { display: none; }
+        .rating-stars label { 
+            font-size: 35px; /* Larger stars */
+            color: #ccc; 
+            cursor: pointer; 
+            transition: color 0.2s; 
+            display: inline-block;
+            margin: 0 2px; /* Small gap between stars */
+        }
+        .rating-stars input:checked ~ label { color: #ffc107; }
+        .rating-stars label:hover, .rating-stars label:hover ~ label { color: #ffdb58; }
 
 
-        /* --- 8. Mobile Optimization (The Key Changes for Attractive Mobile View) --- */
+        /* --- 9. Footer (No Change) --- */
+        footer { 
+            background: #333; 
+            color: #ccc; 
+            padding: 20px 10px; 
+            text-align: center; 
+            font-size: 14px;
+        }
+        .footer-nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 10px; 
+            font-size: 16px; 
+            transition: color 0.3s; 
+            display: inline-block; 
+            padding: 5px 0;
+        }
+
+        /* --- 10. Mobile Optimization --- */
         @media (max-width: 768px) {
-            
-            /* Header & Navigation Adjustments */
             .header { padding: 10px 15px; }
             .site-title { font-size: 20px; }
-            .nav { 
-                position: absolute; 
-                top: 65px; /* Adjust based on header height */
-                left: 0; 
-                width: 100%; 
-                background: #17a2b8; 
-                display: none; /* Hidden by default */
-                flex-direction: column; 
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-            }
-            .nav.open { display: flex; } /* Show when toggled */
-            .nav a { 
-                margin: 0; 
-                padding: 15px 20px; 
-                border-top: 1px solid rgba(255, 255, 255, 0.2);
-                text-align: center;
-                width: 100%;
-            }
+            .nav { position: absolute; top: 65px; left: 0; width: 100%; background: #17a2b8; display: none; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+            .nav.open { display: flex; } 
+            .nav a { margin: 0; padding: 15px 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); text-align: center; width: 100%; }
             .menu-toggle { display: block; }
-            
-            /* Hero Section Adjustments */
-            #hero { padding: 60px 15px 30px; }
             #hero h1 { font-size: 26px; }
-
-            /* CTA Button Stack */
-            .cta-buttons a { 
-                display: block; 
-                width: 90%;
-                margin: 10px auto;
-                font-size: 16px;
-            }
-            
-            /* Form Optimization */
-            .lead-form-container { max-width: 100%; margin: 20px auto 0; }
-
-            /* General Section Spacing */
-            .section { padding: 40px 15px; }
-            .section h3 { font-size: 24px; margin-bottom: 25px; }
-            
-            /* Card Grid is already responsive, just ensure full width use */
+            .cta-buttons a { display: block; width: 90%; margin: 10px auto; font-size: 16px; }
+            .section h3 { font-size: 24px; }
             .grid-container, .property-grid {
-                grid-template-columns: 1fr; /* Force single column stack for clarity on small screens */
+                grid-template-columns: 1fr; 
                 gap: 20px;
             }
         }
@@ -147,11 +177,11 @@
             <span class="site-title">Sanand Rental Broker</span>
         </div>
         <div class="menu-toggle" onclick="document.querySelector('.nav').classList.toggle('open')">☰</div>
-        
         <nav class="nav">
             <a href="#hero">Home</a>
             <a href="#services">Services</a>
             <a href="#listings">Property</a>
+            <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -161,10 +191,10 @@
         
         <div class="cta-buttons">
             <a href="https://wa.me/919327008744" target="_blank" class="whatsapp-cta">
-                🟢 WhatsApp Now
+                <i class="fab fa-whatsapp"></i> **WHATSAPP** Now
             </a>
             <a href="tel:+919327008744" class="call-cta">
-                📞 Call Now
+                <i class="fas fa-phone"></i> **CALL** Now
             </a>
         </div>
         
@@ -173,6 +203,7 @@
              <form class="lead-form" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST">
                 <input type="hidden" name="_next" value="https://sanandrentalborker.github.io/site2025/thankyou.html">
                 <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="NEW RENTAL REQUIREMENT SUBMISSION">
                 
                 <input type="text" name="Full Name" placeholder="Full Name" required>
                 <input type="tel" name="Phone Number" placeholder="Mobile / WhatsApp Number" required>
@@ -210,17 +241,14 @@
     <section id="services" class="section">
         <h3>✅ Our Rental Services</h3>
         <div class="grid-container">
-            
             <div class="service-card">
                 <h4>🏠 1 BHK / 2 BHK Flats & Houses</h4>
                 <p>We work exclusively in rental property. If you need a **1 BHK / 2 BHK Flat, Independent House**, or **Shop & Office**, contact us immediately for assistance.</p>
             </div>
-            
             <div class="service-card">
                 <h4>🏡 Independent Houses & Farmhouses</h4>
                 <p>Verified options available for **Independent Houses** and large properties in Sanand and surrounding areas, perfect for families and executives.</p>
             </div>
-            
             <div class="service-card">
                 <h4>🏢 Shops, Offices & Commercial Space</h4>
                 <p>We provide complete solutions for all your commercial needs, including finding the perfect **Shop (Dukan), Office Space, Warehouse, or Godown** in prime industrial and market areas.</p>
@@ -255,21 +283,21 @@
         <div class="steps-container">
             <div class="step">
                 <div class="step-number"></div>
-                <div class="step-text">**Call or WhatsApp us** immediately, or fill out the form above.</div>
+                <div class="step-text">Call or WhatsApp us immediately, or fill out the form above.</div>
             </div>
             <div class="step">
                 <div class="step-number"></div>
-                <div class="step-text">Tell us your **requirements** (Area, Budget, Occupancy Type).</div>
+                <div class="step-text">Tell us your requirements (Area, Budget, Occupancy Type).</div>
             </div>
             <div class="step">
                 <div class="step-number"></div>
-                <div class="step-text">We **send 2–3 options** with photos and details instantly via WhatsApp.</div>
+                <div class="step-text">We send 2–3 options with photos and details instantly via WhatsApp.</div>
             </div>
             <div class="step">
                 <div class="step-number"></div>
-                <div class="step-text">View the property, and pay the **Brokerage** upon finalization.</div>
+                <div class="step-text">View the property, and pay the Brokerage upon finalization.</div>
             </div>
-            <div class="step-text" style="font-weight: bold; margin-top: 20px;">Simple process, zero confusion.</div>
+            <p class="simple-process-text">Simple process, zero confusion.</p>
         </div>
     </section>
 
@@ -284,7 +312,7 @@
                     <p class="price">₹12,000 / Month</p>
                     <p>📍 **Area:** Sanand GIDC Road</p>
                     <p>👨‍👩‍👧‍👦 **For Whom:** Family Only</p>
-                    <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%202%20BHK%20Sanand%20GIDC%20Flat" target="_blank" class="property-cta-btn">WhatsApp for Details</a>
+                    <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%202%20BHK%20Sanand%20GIDC%20Flat" target="_blank" class="property-cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp for Details</a>
                 </div>
             </div>
 
@@ -295,7 +323,7 @@
                     <p class="price">₹8,500 / Month</p>
                     <p>📍 **Area:** Sarkhej Main Bazaar</p>
                     <p>🏢 **For Whom:** Commercial/Business</p>
-                    <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%20Shop%20in%20Sarkhej%20Main%20Bazaar" target="_blank" class="property-cta-btn">Call Now / WhatsApp</a>
+                    <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%20Shop%20in%20Sarkhej%20Main%20Bazaar" target="_blank" class="property-cta-btn"><i class="fas fa-phone"></i> Call Now / WhatsApp</a>
                 </div>
             </div>
 
@@ -306,30 +334,55 @@
                     <p class="price">₹6,000 / Month</p>
                     <p>📍 **Area:** Changodar Industrial Area</p>
                     <p>🧑‍🎓 **For Whom:** Bachelor / Professional</p>
-                    <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%201%20BHK%20in%20Changodar%20Area" target="_blank" class="property-cta-btn">WhatsApp for Details</a>
+                    <a href="https://wa.me/919327008744?text=I'm%20interested%20in%20the%201%20BHK%20in%20Changodar%20Area" target="_blank" class="property-cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp for Details</a>
                 </div>
             </div>
-            
-            </div>
+        </div>
     </section>
 
-    <section id="testimonials" class="section" style="background-color: white;">
-        <h3>✅ Client Reviews</h3>
+    <section id="testimonials" class="section">
+        <h3>✅ What Our Clients Say</h3>
         <div class="grid-container">
             <div class="service-card testimonial-card">
                 <p>“I found a 1BHK in just 1 day—and it was affordable too!”</p>
                 <div class="client-info">
-                    <img src="https://via.placeholder.com/50" alt="Client Photo">
                     <span style="font-weight: bold;">— Ravi, Bachelor, Sanand</span>
                 </div>
             </div>
             <div class="service-card testimonial-card">
                 <p>“Professional service & verified property – thank you!”</p>
                 <div class="client-info">
-                    <img src="https://via.placeholder.com/50" alt="Client Photo">
                     <span style="font-weight: bold;">— Kavita, IT Professional, Sarkhej</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section" style="background-color: #e9ecef;">
+        <h3>✍️ Submit Your Review</h3>
+        <div class="review-form-container lead-form-container">
+             <p>Tell Us About Your Experience</p>
+             <form class="lead-form" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST">
+                <input type="hidden" name="_next" value="https://sanandrentalborker.github.io/site2025/thankyou.html">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="NEW CUSTOMER REVIEW SUBMISSION">
+
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="text" name="Location" placeholder="Your Location (e.g., Sanand, Changodar)" required>
+                
+                <label style="font-weight: bold; display: block; text-align: center; margin-bottom: 5px;">Your Rating</label>
+                <div class="rating-stars">
+                    <input type="radio" id="star5" name="Rating" value="5 Stars" required /><label for="star5" title="5 Stars">★</label>
+                    <input type="radio" id="star4" name="Rating" value="4 Stars" /><label for="star4" title="4 Stars">★</label>
+                    <input type="radio" id="star3" name="Rating" value="3 Stars" /><label for="star3" title="3 Stars">★</label>
+                    <input type="radio" id="star2" name="Rating" value="2 Stars" /><label for="star2" title="2 Stars">★</label>
+                    <input type="radio" id="star1" name="Rating" value="1 Star" /><label for="star1" title="1 Star">★</label>
+                </div>
+                
+                <textarea name="Review" placeholder="Write your feedback here (Max 250 characters)" maxlength="250" rows="4" required></textarea>
+                
+                <button type="submit">SUBMIT REVIEW</button>
+            </form>
         </div>
     </section>
 
@@ -337,38 +390,43 @@
         <h3>📍 Our Service Areas & Contact</h3>
         <div class="contact-info" style="text-align: center;">
             <p>
-                📞 **Mobile & WhatsApp:** <a href="tel:+919327008744">+91 93270 08744</a>, 
-                <a href="tel:+918758688902">+91 87586 88902</a>
+                📞 **Mobile & WhatsApp:** <a href="tel:+919327008744"><i class="fas fa-phone-alt"></i> +91 93270 08744</a>, 
+                <a href="tel:+918758688902"><i class="fas fa-phone-alt"></i> +91 87586 88902</a>
             </p>
             <p>
-                📧 **Email:** <a href="mailto:sanandrentalbroker@gmail.com">sanandrentalbroker@gmail.com</a>
+                📧 **Email:** <a href="mailto:sanandrentalbroker@gmail.com"><i class="fas fa-envelope"></i> sanandrentalbroker@gmail.com</a>
             </p>
         </div>
         
-        <div class="map-container">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117498.4128526543!2d72.24724016482613!3d23.015250917260596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e26372d8e489b%3A0xc3af87c699967c74!2sSanand%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1660600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-container" style="max-width: 800px; margin: 20px auto;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117498.4128526543!2d72.24724016482613!3d23.015250917260596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e26372d8e489b%3A0xc3af87c699967c74!2sSanand%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1660600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" style="width: 100%; height: 350px; border: 0; border-radius: 10px;"></iframe>
         </div>
     </section>
 
     <footer>
-        © 2025 Sanand Rental Broker | Simple process, zero confusion.
+        <div class="footer-nav">
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#listings">Property</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p style="margin-top: 10px;">© 2025 Sanand Rental Broker | Simple process, zero confusion.</p>
     </footer>
 
     <div class="whatsapp" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
         <a href="https://wa.me/919327008744" target="_blank">
-            <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp Chat" style="width: 55px; height: 55px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.2s;"/>
+            <i class="fab fa-whatsapp-square" style="font-size: 55px; color: #25d366; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.4); transition: transform 0.2s;"></i>
         </a>
     </div>
     
     <script>
-        // Simple JS for menu toggle
         document.addEventListener('DOMContentLoaded', () => {
             const menuToggle = document.querySelector('.menu-toggle');
             const nav = document.querySelector('.nav');
             menuToggle.addEventListener('click', () => {
                 nav.classList.toggle('open');
             });
-            // Close menu when a link is clicked
             nav.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     nav.classList.remove('open');
