@@ -51,185 +51,174 @@
         .grid-container, .steps-container-new, .map-container, .lead-form-container, .property-grid {
             max-width: 1100px; 
             margin: 0 auto;
-            width: 95%; /* Ensures responsiveness */
-            box-sizing: border-box; /* Fixes padding issues on small screens */
+            width: 95%; 
+            box-sizing: border-box;
         }
         .lead-form-container { max-width: 400px; padding: 30px; }
         
-        /* Original steps-container is hidden in favor of new steps-container-new */
+        /* Hiding the old steps container structure to use the new one */
         .steps-container { display: none; }
-        /* Only for hiding the original one, we will use the new one below */
         
         /* =================================================== */
-        /* 2. HEADER & NAVIGATION (FIXED ALIGNMENT) */
+        /* 2. HEADER & NAVIGATION */
         /* =================================================== */
-        .header { 
-            background-color: var(--primary-color); 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 10px 15px;
-        }
+        .header { background-color: var(--primary-color); box-shadow: 0 4px 8px rgba(0,0,0,0.2); position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; }
         .logo-container { display: flex; align-items: center; flex-shrink: 0; }
         .logo { height: 40px; width: 40px; margin-right: 10px; border-radius: 5px; object-fit: cover; }
         .site-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: white; line-height: 1.2; }
         .menu-toggle { display: block; cursor: pointer; font-size: 26px; color: white; }
-        .nav { 
-            position: absolute; top: 60px; left: 0; width: 100%; 
-            background: var(--primary-color); display: none; flex-direction: column; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+        .nav { position: absolute; top: 60px; left: 0; width: 100%; background: var(--primary-color); display: none; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .nav.open { display: flex; } 
         .nav a { color: white; padding: 15px 20px; border-top: 1px solid rgba(255, 255, 255, 0.2); text-align: center; font-weight: 600; }
 
         /* =================================================== */
-        /* 3. HOW IT WORKS (NEW PROFESSIONAL TIMELINE DESIGN) */
+        /* 3. HERO SECTION & CTA BUTTONS (PROFESSIONAL LOOK) */
+        /* =================================================== */
+        #hero { 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
+            color: white; padding: 60px 15px 30px; text-align: center; 
+        }
+        #hero h1 { 
+            font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 800; margin-bottom: 30px; line-height: 1.4;
+            text-shadow: 0px 4px 6px rgba(0,0,0,0.8), 0 0 15px var(--primary-color); 
+            background: rgba(0, 0, 0, 0.5); padding: 15px 10px; border-radius: 10px;
+            border: 2px solid var(--accent-color); display: inline-block; max-width: 90%; 
+        }
+        .cta-buttons { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 25px; }
+        .cta-buttons a {
+            display: flex; align-items: center; justify-content: center;
+            width: 90%; max-width: 350px; padding: 15px 20px; margin: 10px 0;
+            border-radius: 50px; font-weight: 700; font-size: 18px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3); transition: transform 0.3s;
+        }
+        .cta-buttons a i { margin-right: 10px; font-size: 22px; }
+        .cta-buttons a:hover { transform: translateY(-3px); }
+        .whatsapp-cta { background-color: #25d366; color: white; border: 2px solid #128c7e; }
+        .call-cta { background-color: var(--accent-color); color: #333; border: 2px solid #cc9900; }
+        
+        /* Form Design */
+        .lead-form-container { background: #ffffff; padding: 30px; border-radius: 15px; max-width: 400px; margin: 30px auto 0; box-shadow: 0 12px 30px rgba(0,0,0,0.35); border: 1px solid #e0e0e0; }
+        .lead-form-container p { color: #b00020; font-family: 'Montserrat', sans-serif; font-size: 1.4em; font-weight: 800; padding: 15px 10px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 0.5px; background: linear-gradient(145deg, #ffe0e0 0%, #ffffff 100%); border-radius: 12px; border: 1px solid #ffcccc; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.15); }
+        .lead-form input, .lead-form select, .lead-form textarea { width: 100%; padding: 12px 15px; margin-bottom: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; }
+        .lead-form button { background-color: var(--primary-color); color: white; font-weight: bold; padding: 15px; border-radius: 8px; font-size: 18px; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(23, 162, 184, 0.4); border: none; width: 100%; transition: background-color 0.3s; }
+        .lead-form button:hover { background-color: #107c8d; }
+
+        /* =================================================== */
+        /* 4. SERVICES / WHY US / LISTINGS (IMPROVED CARD DESIGN) */
+        /* =================================================== */
+        .service-card, .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card h4, .feature-card h4 { color: #333; font-size: 1.3em; font-weight: 700; margin-top: 0; }
+        .service-card:hover, .feature-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+
+        /* Property Card Styling */
+        .property-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            text-align: left;
+        }
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-details { padding: 15px; }
+        .card-details h4 { color: var(--primary-color); margin-top: 0; margin-bottom: 5px; font-size: 1.4em; }
+        .price { font-size: 1.2em; font-weight: 700; color: var(--secondary-color); margin: 0 0 10px; }
+        .property-cta-btn {
+            display: block; text-align: center; padding: 10px; margin-top: 15px;
+            background-color: #25d366; color: white; border-radius: 5px; font-weight: 600;
+        }
+        .property-cta-btn i { margin-right: 5px; }
+
+
+        /* =================================================== */
+        /* 5. HOW IT WORKS (PROFESSIONAL TIMELINE) */
         /* =================================================== */
         #how-it-works { background-color: #f0f8ff; }
 
         .steps-container-new {
-            display: flex;
-            flex-direction: column; /* Mobile: Vertical layout */
-            align-items: center;
-            position: relative;
-            padding-top: 10px;
+            display: flex; flex-direction: column; align-items: center; position: relative; padding-top: 10px;
         }
-
-        /* Vertical Line for Timeline Effect (Mobile/Default) */
         .steps-container-new::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--accent-color); /* Yellow Line */
-            transform: translateX(-50%);
-            display: block;
+            content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
+            background: var(--accent-color); transform: translateX(-50%); display: block;
         }
-
         .step-item-new {
-            width: 90%;
-            max-width: 400px;
-            margin: 20px 0;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            position: relative;
-            text-align: left;
-            border-left: 5px solid var(--primary-color);
+            width: 90%; max-width: 400px; margin: 20px 0; padding: 20px; background: white;
+            border-radius: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); position: relative;
+            text-align: left; border-left: 5px solid var(--primary-color);
         }
-
         .step-icon-new {
-            position: absolute;
-            top: 50%;
-            left: -10px; 
-            transform: translateY(-50%) translateX(-50%);
-            width: 35px;
-            height: 35px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: 700;
-            box-shadow: 0 0 0 5px #f0f8ff; /* Background matching ring */
-            z-index: 10;
+            position: absolute; top: 50%; left: -10px; transform: translateY(-50%) translateX(-50%);
+            width: 35px; height: 35px; background: var(--primary-color); color: white;
+            border-radius: 50%; display: flex; justify-content: center; align-items: center;
+            font-weight: 700; box-shadow: 0 0 0 5px #f0f8ff; z-index: 10;
         }
         .step-item-new p { margin: 0; font-size: 16px; color: #555; }
         .simple-process-text { margin-top: 30px; font-style: italic; color: var(--secondary-color); font-weight: bold; }
-        
+
         /* =================================================== */
-        /* 4. REVIEW FORM (AMAZON-STYLE PROFESSIONAL DESIGN) */
+        /* 6. REVIEW FORM (AMAZON-STYLE) */
         /* =================================================== */
         .rating-stars {
-            unicode-bidi: bidi-override;
-            direction: rtl;
-            text-align: center;
-            font-size: 35px; /* Bigger stars */
-            margin: 15px 0;
-            display: inline-block;
+            unicode-bidi: bidi-override; direction: rtl; text-align: center;
+            font-size: 35px; margin: 15px 0; display: inline-block;
         }
-        .rating-stars > input {
-            display: none;
-        }
+        .rating-stars > input { display: none; }
         .rating-stars > label {
-            display: inline-block;
-            padding: 0 2px;
-            cursor: pointer;
-            color: #ccc; /* Default color: grey */
+            display: inline-block; padding: 0 2px; cursor: pointer; color: #ccc; 
             transition: color 0.3s, transform 0.1s;
         }
-        /* Hover Effect */
         .rating-stars > label:hover,
-        .rating-stars > label:hover ~ label {
-            color: var(--review-star-color); /* Hover color: Orange */
-        }
-        /* Active rating color */
-        .rating-stars > input:checked ~ label {
-            color: var(--review-star-color);
-        }
+        .rating-stars > label:hover ~ label { color: var(--review-star-color); }
+        .rating-stars > input:checked ~ label { color: var(--review-star-color); }
         
         .review-form-container .lead-form button {
-            /* Overriding default button style for Review Submit */
             background-color: var(--secondary-color) !important; 
             box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4) !important;
             transition: background-color 0.3s, transform 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 15px;
+            text-transform: uppercase; letter-spacing: 2px; margin-top: 15px;
         }
         .review-form-container .lead-form button:hover {
             transform: translateY(-2px);
             background-color: #c82333 !important;
         }
-
+        
         /* =================================================== */
-        /* 5. FOOTER (ATTRACTIVE & PROFESSIONAL DESIGN) */
+        /* 7. FOOTER (DARK & PROFESSIONAL) */
         /* =================================================== */
         footer {
-            background-color: #212529; /* Darker background */
-            color: white;
-            padding: 30px 15px;
-            text-align: center;
-            border-top: 5px solid var(--primary-color);
+            background-color: #212529; color: white; padding: 30px 15px;
+            text-align: center; border-top: 5px solid var(--primary-color);
         }
         .footer-nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 15px;
-            padding: 0;
+            display: flex; flex-wrap: wrap; justify-content: center;
+            margin-bottom: 15px; padding: 0;
         }
         .footer-nav a {
-            color: var(--accent-color); /* Yellow links */
-            margin: 5px 10px; /* Tighter spacing for mobile */
-            font-weight: 500;
-            padding: 5px 8px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--accent-color); margin: 5px 15px; font-weight: 500;
+            padding: 5px 8px; border-radius: 5px; transition: background-color 0.3s, color 0.3s;
+            font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px;
         }
         .footer-nav a:hover {
-            background-color: var(--primary-color); /* Blue background on hover */
-            color: white; /* White text on hover */
+            background-color: var(--primary-color); color: white;
         }
         footer p {
-            margin: 0;
-            font-size: 0.9em;
-            color: #aaa; /* Lighter text for copyright */
+            margin: 0; font-size: 0.9em; color: #aaa;
         }
 
+
         /* =================================================== */
-        /* 6. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
+        /* 8. MEDIA QUERY FOR DESKTOP (768px+) */
         /* =================================================== */
         @media (min-width: 768px) {
             .menu-toggle { display: none; }
@@ -245,44 +234,24 @@
             .grid-container { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
             .property-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
             
-            /* How It Works (Desktop: Two Columns/Split Layout) */
-            .steps-container-new {
-                padding-top: 0;
-            }
-            .steps-container-new::before { left: 50%; } /* Center line remains */
+            /* How It Works (Desktop Split Layout) */
+            .steps-container-new { padding-top: 0; }
             .step-item-new {
-                width: 45%; 
-                max-width: none;
-                margin: 20px 0;
-                border-left: none;
+                width: 45%; max-width: none; margin: 20px 0; border-left: none;
                 border-right: 5px solid var(--primary-color);
             }
-            
-            /* Odd steps to the left */
             .step-item-new:nth-child(odd) {
-                align-self: flex-start;
-                margin-right: 55%;
-                border-right: none;
-                border-left: 5px solid var(--primary-color);
-                text-align: right;
+                align-self: flex-start; margin-right: 55%; border-right: none;
+                border-left: 5px solid var(--primary-color); text-align: right;
             }
-            /* Even steps to the right */
             .step-item-new:nth-child(even) {
-                align-self: flex-end;
-                margin-left: 55%;
-                text-align: left;
+                align-self: flex-end; margin-left: 55%; text-align: left;
             }
-
-            /* Adjust Icon position for split layout */
             .step-item-new:nth-child(odd) .step-icon-new {
-                left: auto;
-                right: -10px; 
-                transform: translateY(-50%) translateX(50%);
+                left: auto; right: -10px; transform: translateY(-50%) translateX(50%);
             }
             .step-item-new:nth-child(even) .step-icon-new {
-                left: -10px;
-                right: auto;
-                transform: translateY(-50%) translateX(-50%);
+                left: -10px; right: auto; transform: translateY(-50%) translateX(-50%);
             }
         }
     </style>
@@ -417,7 +386,7 @@
             </div>
             <p class="simple-process-text" data-aos="zoom-in" data-aos-delay="600">Simple process, zero confusion.</p>
         </div>
-        </section>
+    </section>
 
     <section id="listings" class="section">
         <h3>🔍 Featured Rental Property Listings</h3>
