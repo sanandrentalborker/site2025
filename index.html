@@ -97,17 +97,19 @@
             background: rgba(0, 0, 0, 0.5); padding: 15px 10px; border-radius: 10px;
             border: 2px solid var(--accent-color); display: inline-block;
             max-width: 90%; font-size: 32px;
+            font-family: 'Montserrat', sans-serif; font-weight: 800;
+            line-height: 1.4;
+            text-shadow: 0px 4px 6px rgba(0,0,0,0.8), 0 0 15px var(--primary-color); 
         }
-        /* CTA button styling (using flex-direction: column in mobile) is correct */
 
         /* =================================================== */
-        /* 4. HOW IT WORKS (NEW PROFESSIONAL DESIGN) */
+        /* 4. HOW IT WORKS (Timeline Design retained, Content restored) */
         /* =================================================== */
         #how-it-works { background-color: #f0f8ff; }
 
         .steps-container-new {
             display: flex;
-            flex-direction: column; /* Mobile: Vertical layout */
+            flex-direction: column; 
             align-items: center;
             position: relative;
             padding-top: 10px;
@@ -142,7 +144,7 @@
         .step-icon-new {
             position: absolute;
             top: 50%;
-            left: -10px; /* Aligned to the vertical line (will adjust for desktop) */
+            left: -10px; 
             transform: translateY(-50%) translateX(-50%);
             width: 35px;
             height: 35px;
@@ -153,7 +155,7 @@
             justify-content: center;
             align-items: center;
             font-weight: 700;
-            box-shadow: 0 0 0 5px #f0f8ff; /* White ring to cover line */
+            box-shadow: 0 0 0 5px #f0f8ff; 
             z-index: 10;
         }
         .step-item-new p { margin: 0; font-size: 16px; color: #555; }
@@ -162,9 +164,8 @@
         /* =================================================== */
         /* 5. REVIEW FORM (IMPROVED STAR RATING) */
         /* =================================================== */
-        /* Ensure form fields are fully responsive */
         .lead-form input, .lead-form select, .lead-form textarea, .lead-form button {
-            width: 100%; /* Fully Responsive */
+            width: 100%; 
         }
 
         .rating-stars {
@@ -182,16 +183,14 @@
             display: inline-block;
             padding: 0 2px;
             cursor: pointer;
-            color: #ccc; /* Default color: grey */
+            color: #ccc; 
             transition: color 0.3s;
         }
-        /* Hover Effect (coloring stars on hover) */
         .rating-stars > input:checked ~ label, 
         .rating-stars > label:hover,
         .rating-stars > label:hover ~ label {
-            color: var(--accent-color); /* Hover color: Yellow */
+            color: var(--accent-color); 
         }
-        /* Active rating color */
         .rating-stars > input:checked + label:hover,
         .rating-stars > input:checked ~ label:hover,
         .rating-stars > input:checked ~ label:hover ~ label,
@@ -200,7 +199,7 @@
         }
 
         .review-submit-btn {
-            background-color: var(--secondary-color) !important; /* Highlight Submit Button */
+            background-color: var(--secondary-color) !important; 
             box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4) !important;
             transition: background-color 0.3s, transform 0.3s;
         }
@@ -210,10 +209,10 @@
         }
         
         /* =================================================== */
-        /* 6. FOOTER (ATTRACTIVE & MOBILE-FRIENDLY) */
+        /* 6. FOOTER (Attractive Design Retained, Content Restored) */
         /* =================================================== */
         footer {
-            background-color: #212529; /* Darker background */
+            background-color: #212529; 
             color: white;
             padding: 30px 15px;
             text-align: center;
@@ -227,8 +226,8 @@
             padding: 0;
         }
         .footer-nav a {
-            color: var(--accent-color); /* Yellow links */
-            margin: 5px 10px; /* Tighter spacing for mobile */
+            color: var(--accent-color); 
+            margin: 5px 10px; 
             font-weight: 500;
             padding: 5px 8px;
             border-radius: 5px;
@@ -242,7 +241,7 @@
         footer p {
             margin: 0;
             font-size: 0.9em;
-            color: #aaa; /* Lighter text for copyright */
+            color: #aaa; 
         }
 
 
@@ -273,7 +272,7 @@
                 width: 45%; 
                 max-width: none;
                 margin: 20px 0;
-                border-left: none; /* Remove left border on desktop */
+                border-left: none; 
                 border-right: 5px solid var(--primary-color);
             }
             
