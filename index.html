@@ -89,7 +89,7 @@
         }
 
         /* =================================================== */
-        /* 3. HERO SECTION (IMPACTFUL H1 & CENTERED CTA) */
+        /* 3. HERO SECTION (CLEAN H1 & CENTERED CTA) */
         /* =================================================== */
         #hero { 
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('your-banner-image-url.jpg') no-repeat center center/cover; 
@@ -99,11 +99,10 @@
         }
         #hero h1 { 
             font-family: 'Montserrat', sans-serif; 
-            font-size: 32px; /* Increased size for mobile impact */
+            font-size: 32px; 
             font-weight: 800;
             margin-bottom: 30px; 
             line-height: 1.25;
-            /* Enhanced 3D/Shadow effect */
             text-shadow: 0px 4px 6px rgba(0,0,0,0.8), 0 0 15px var(--primary-color); 
         }
         .cta-buttons { 
@@ -120,16 +119,17 @@
             width: 90%; 
             max-width: 320px; 
             margin: 10px auto; 
-            padding: 16px 20px; /* Bigger tap target */
+            padding: 16px 20px; 
             font-weight: 700;
             border-radius: 50px; 
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* Stronger shadow */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3); 
             transition: transform 0.3s, box-shadow 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
+            text-decoration: none; /* Ensure no underline */
         }
         .cta-buttons a:hover {
-            transform: translateY(-4px); /* More attractive hover effect */
+            transform: translateY(-4px); 
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         .whatsapp-cta { background-color: #25d366; color: white; border: 2px solid #128c7e; }
@@ -137,20 +137,19 @@
         .cta-buttons i { margin-right: 10px; font-size: 22px; }
 
         /* =================================================== */
-        /* 4. LEAD FORM STYLING (3D & PROFESSIONAL) */
+        /* 4. LEAD FORM STYLING */
         /* =================================================== */
         .lead-form-container { 
             background: #ffffff; 
             padding: 30px; 
             border-radius: 15px; 
-            max-width: 480px; /* Slightly wider form */
+            max-width: 480px; 
             margin: 30px auto 0; 
-            box-shadow: 0 12px 30px rgba(0,0,0,0.35); /* Deeper 3D shadow */
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35); 
             border: 1px solid #e0e0e0;
         }
-        /* **Professional 3D Form Header (As requested)** */
         .lead-form-container p { 
-            color: var(--secondary-color); 
+            color: #b00020; 
             font-family: 'Montserrat', sans-serif;
             font-size: 1.4em; 
             font-weight: 800; 
@@ -158,13 +157,10 @@
             margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            
-            /* Enhanced 3D/Shaded Background Effect */
             background: linear-gradient(145deg, #ffe0e0 0%, #ffffff 100%);
             border-radius: 12px;
             border: 1px solid #ffcccc;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.15); /* Inset and outer shadow for depth */
-            color: #b00020; /* Darker red for contrast */
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.15); 
         }
         .lead-form input, .lead-form select, .lead-form textarea { 
             width: 100%; 
@@ -174,21 +170,7 @@
             border-radius: 8px; 
             font-size: 16px; 
             box-sizing: border-box; 
-            transition: border-color 0.3s;
         }
-        .lead-form select {
-            /* Better styling for Select Dropdown */
-            appearance: none; /* Remove default arrow */
-            background: white url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2317a2b8%22%20d%3D%22M287%20170a15%2015%200%200%200%20-15-15H20a15%2015%200%200%200%20-10%2025l128%20128a15%2015%200%200%200%2020%200l128-128a15%2015%200%200%200%205-10z%22%2F%3E%3C%2Fsvg%3E') no-repeat right 12px center;
-            background-size: 12px;
-        }
-
-        .lead-form input:focus, .lead-form select:focus, .lead-form textarea:focus {
-            border-color: var(--primary-color); 
-            box-shadow: 0 0 8px rgba(23, 162, 184, 0.4);
-            outline: none;
-        }
-
         .lead-form button { 
             background-color: var(--primary-color); 
             color: white; 
@@ -200,64 +182,64 @@
             box-shadow: 0 4px 10px rgba(23, 162, 184, 0.4);
             border: none;
             width: 100%;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-        }
-        .lead-form button:hover {
-            background-color: #138496;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(23, 162, 184, 0.6);
         }
 
         /* =================================================== */
-        /* 5. REVIEW FORM STYLING (Submit Review) */
+        /* 5. CARD STYLING (Services & Features) - FIX APPLIED */
         /* =================================================== */
-        #submit-review .lead-form-container {
-            /* Inherits main form container style, keeping it professional */
-            border: 1px solid #ddd;
-            background-color: #fff;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile: Single Column */
+            gap: 25px; 
         }
-        .rating-stars { 
-            display: inline-block; 
-            direction: rtl;
-            text-align: center;
-            margin-bottom: 20px;
+
+        /* Fixed Card Design for Service and Features */
+        .service-card, .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft, professional shadow */
+            border-left: 5px solid var(--primary-color); /* Highlight color */
+            text-align: left;
+            transition: transform 0.3s ease;
         }
-        .rating-stars label { 
-            font-size: 38px; 
-            color: #ccc; 
-            transition: color 0.3s, transform 0.1s; 
-            margin: 0 3px; 
-            cursor: pointer;
+        .service-card:hover, .feature-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
-        .rating-stars input { display: none; }
-        .rating-stars input:checked ~ label { 
-            color: var(--accent-color); 
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        .service-card h4, .feature-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
-        .rating-stars label:hover, .rating-stars label:hover ~ label { 
-            color: var(--accent-color);
-            transform: scale(1.1);
+        .service-card p, .feature-card p {
+            font-size: 15px;
+            color: #555;
         }
+
 
         /* =================================================== */
         /* 6. MEDIA QUERY FOR TABLET AND DESKTOP (768px+) */
         /* =================================================== */
         @media (min-width: 768px) {
-            /* Hero & CTA */
-            #hero { padding: 100px 40px 60px; }
-            #hero h1 { font-size: 48px; } /* Larger on desktop */
+            .menu-toggle { display: none; }
+            .nav { position: static; display: flex; flex-direction: row; box-shadow: none; width: auto; }
+            .nav a { padding: 0; border-top: none; margin-left: 25px; }
+
+            /* Hero */
+            #hero h1 { font-size: 48px; } 
             .cta-buttons { flex-direction: row; } 
             .cta-buttons a { 
                 width: auto; 
                 margin: 0 15px; 
-                padding: 18px 40px; /* Even bigger on desktop */
+                padding: 18px 40px; 
                 min-width: 280px;
             }
-            .lead-form-container { padding: 40px; } 
 
-            /* Sections */
-            .section { padding: 80px 40px; }
+            /* Grid Views (Desktop) */
             .grid-container {
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 gap: 30px;
@@ -281,19 +263,20 @@
             <a href="#hero">Home</a>
             <a href="#services">Services</a>
             <a href="#listings">Property</a>
-            <a href="#submit-review">Reviews</a> <a href="#contact">Contact</a>
+            <a href="#submit-review">Reviews</a> 
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <section id="hero">
-        <h1>🔑 Need a Flat, House, or Shop? Get **Verified Rental Property** Here — For Family, Bachelors & Professionals.</h1>
+        <h1>Need a Flat, House, or Shop? Get Verified Rental Property Here — For Family, Bachelors & Professionals.</h1>
         
         <div class="cta-buttons">
             <a href="https://wa.me/919327008744" target="_blank" class="whatsapp-cta" data-aos="fade-right" data-aos-duration="1200">
-                <i class="fab fa-whatsapp"></i> **WHATSAPP Now**
+                <i class="fab fa-whatsapp"></i> WHATSAPP Now
             </a>
             <a href="tel:+919327008744" class="call-cta" data-aos="fade-left" data-aos-duration="1200">
-                <i class="fas fa-phone"></i> **CALL Now**
+                <i class="fas fa-phone"></i> CALL Now
             </a>
         </div>
         
@@ -471,7 +454,7 @@
         <h3>📍 Our Service Areas & Contact</h3>
         <div class="contact-info" style="text-align: center;">
             <p>
-                📞 Mobile & WhatsApp: <a href="tel:+919327008744"><i class="fas fa-phone-alt"></i> **+91 93270 08744**</a>, 
+                📞 Mobile & WhatsApp: <a href="tel:+919327008744"><i class="fas fa-phone-alt"></i> +91 93270 08744</a>, 
                 <a href="tel:+918758688902"><i class="fas fa-phone-alt"></i> +91 87586 88902</a>
             </p>
             <p>
