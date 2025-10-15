@@ -232,11 +232,14 @@
         .rating-stars > label:hover ~ label { color: var(--review-star-color); }
         .rating-stars > input:checked ~ label { color: var(--review-star-color); }
         
+        /* FIX: Made the review submit button bigger and bolder for mobile usability */
         .review-form-container .lead-form button {
             background-color: var(--secondary-color) !important; 
             box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4) !important;
             transition: background-color 0.3s, transform 0.3s;
             text-transform: uppercase; letter-spacing: 2px; margin-top: 15px;
+            padding: 18px; /* Added padding for better click area */
+            font-size: 20px; /* Made font size larger */
         }
         .review-form-container .lead-form button:hover {
             transform: translateY(-2px);
@@ -484,7 +487,7 @@
              <form class="lead-form" action="https://formsubmit.co/sanandrentalbroker@gmail.com" method="POST">
                 <input type="hidden" name="_next" value="https://sanandrentalborker.github.io/site2025/thankyou.html">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="NEW CUSTOMER REVIEW SUBMISSION (MANUAL)">
+                <input type="hidden" name="_subject" value="NEW CUSTOMER REVIEW SUBMISSION">
 
                 <input type="text" name="Name" placeholder="Your Name" required>
                 <input type="text" name="Location" placeholder="Your Location (e.g., Sanand, Changodar)" required>
