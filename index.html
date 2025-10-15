@@ -133,9 +133,20 @@
         }
         .rating-stars input:checked ~ label { color: #ffc107; }
         .rating-stars label:hover, .rating-stars label:hover ~ label { color: #ffdb58; }
+        
+        /* --- 9. Live Reviews Container Style (Kept the dashed border for visibility until actual code is pasted) --- */
+        #live-reviews-display { 
+            border: 2px dashed #17a2b8; 
+            padding: 20px; 
+            text-align: center; 
+            margin-top: 20px; 
+            min-height: 250px;
+            display: flex; /* Centering the content if any */
+            justify-content: center;
+            align-items: center;
+        }
 
-
-        /* --- 9. Footer (No Change) --- */
+        /* --- 10. Footer (No Change) --- */
         footer { 
             background: #333; 
             color: #ccc; 
@@ -153,7 +164,7 @@
             padding: 5px 0;
         }
 
-        /* --- 10. Mobile Optimization --- */
+        /* --- 11. Mobile Optimization --- */
         @media (max-width: 768px) {
             .cta-buttons a { display: block; width: 90%; margin: 10px auto; font-size: 16px; }
             .grid-container, .property-grid {
@@ -175,7 +186,8 @@
             <a href="#hero">Home</a>
             <a href="#services">Services</a>
             <a href="#listings">Property</a>
-            <a href="#live-reviews">Live Reviews</a> <a href="#contact">Contact</a>
+            <a href="#live-reviews">Live Reviews</a> 
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -236,15 +248,15 @@
         <div class="grid-container" data-aos="fade-up" data-aos-duration="1000">
             <div class="service-card" data-aos="zoom-in" data-aos-duration="1000">
                 <h4>🏠 1 BHK / 2 BHK Flats & Houses</h4>
-                <p>We work exclusively in rental property. If you need a **1 BHK / 2 BHK Flat, Independent House**, or **Shop & Office**, contact us immediately for assistance.</p>
+                <p>We work exclusively in rental property. If you need a 1 BHK / 2 BHK Flat, Independent House, or Shop & Office, contact us immediately for assistance.</p>
             </div>
             <div class="service-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <h4>🏡 Independent Houses & Farmhouses</h4>
-                <p>Verified options available for **Independent Houses** and large properties in Sanand and surrounding areas, perfect for families and executives.</p>
+                <p>Verified options available for Independent Houses and large properties in Sanand and surrounding areas, perfect for families and executives.</p>
             </div>
             <div class="service-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                 <h4>🏢 Shops, Offices & Commercial Space</h4>
-                <p>We provide complete solutions for all your commercial needs, including finding the perfect **Shop (Dukan), Office Space, Warehouse, or Godown** in prime industrial and market areas.</p>
+                <p>We provide complete solutions for all your commercial needs, including finding the perfect Shop (Dukan), Office Space, Warehouse, or Godown in prime industrial and market areas.</p>
             </div>
         </div>
     </section>
@@ -258,7 +270,7 @@
             </div>
             <div class="feature-card" data-aos="flip-up" data-aos-delay="100">
                 <h4>✔ Verified Properties – No Time Waste</h4>
-                <p>We only show **Verified Properties**. We value your time and ensure quick and hassle-free viewings.</p>
+                <p>We only show Verified Properties. We value your time and ensure quick and hassle-free viewings.</p>
             </div>
             <div class="feature-card" data-aos="flip-up" data-aos-delay="200">
                 <h4>✔ Family & Bachelor Separate List</h4>
@@ -337,10 +349,10 @@
         <h3>⭐ Our Customers Rate Us Highly</h3>
         <div class="review-widget-container" style="max-width: 800px; margin: 0 auto; padding: 20px;" data-aos="fade-in" data-aos-duration="1500">
             
-            <p style="font-size: 1.1em; color: #555;">**Note:** Yahaan aapko apne Google Business Profile (Maps) Reviews Widget ka code daalna hai, jisse reviews apne aap update hote rahenge.</p>
+            <p style="font-size: 1.1em; color: #555;">**Note:** Yahaan aapko apne Google Business Profile (Maps) Reviews Widget ka code daalna hai, jisse reviews apne aap update hote rahenge. Widget code paste karte samay neeche ki dashed line hata dijiye.</p>
             
-            <div style="border: 2px dashed #17a2b8; padding: 50px; text-align: center; margin-top: 20px; min-height: 250px;">
-                <p style="font-weight: bold; color: #17a2b8;">[WIDGET PLACEHOLDER: Your Live Google Map Reviews will appear here]</p>
+            <div id="live-reviews-display" style="border: 2px dashed #17a2b8; padding: 50px; text-align: center; margin-top: 20px; min-height: 250px;">
+                <p style="font-weight: bold; color: #aaa;">[Reviews Widget is Loading...]</p>
             </div>
             </div>
     </section>
@@ -411,8 +423,8 @@
     <script>
         // AOS Initialization
         AOS.init({
-            once: true, // Only animate once
-            duration: 800, // Animation speed
+            once: true, 
+            duration: 800, 
         });
         
         // Simple JS for menu toggle (existing code)
